@@ -15,6 +15,7 @@ var bgmusic;
 var restartButton;
 var resetButton;
 var lvlUpButton;
+var threshold;
 
 level.prototype = {
     init: function(levels, curlvl)
@@ -56,6 +57,10 @@ level.prototype = {
         restartButton = this.game.add.button(0, 0, '', this.restartLevel, this);
         resetButton = this.game.add.button(1000, 0, '', this.resetGame, this);
         lvlUpButton = this.game.add.button(500, 250, '', this.lvlUp, this);
+
+        threshold = this.game.add.text(500, 60, "Threshold: " + lvl.threshold);
+        threshold.align = "center";
+        threshold.font = "Arial";
 
         youRGB = this.game.add.text(25, 275,
             "Your RGB Values\nRed: " + player.color[0] + "\nGreen: " + player.color[1] + "\nBlue: " + player.color[2]);
@@ -186,21 +191,21 @@ level.prototype = {
                 diffR += Math.min(255 - you.rgb[0], dudeR / 255 * player.colorConstant);
                 dude.tintTaken[0] += diffR;
                 you.rgb[0] += diffR;
-                percentR = dude.tintTaken[0] / 255;
+                percentR = 1 - (dudeR - dude.tintTaken[0]) / 255;
             }
             if (dude.tintTaken[1] < dudeG)
             {
                 diffG += Math.min(255 - you.rgb[1], dudeG / 255 * player.colorConstant);
                 dude.tintTaken[1] += diffG;
                 you.rgb[1] += diffG;
-                percentG = dude.tintTaken[1] / 255;
+                percentG = 1 - (dudeG - dude.tintTaken[1]) / 255;
             }
             if (dude.tintTaken[2] < dudeB)
             {
                 diffB += Math.min(255 - you.rgb[2], dudeB / 255 * player.colorConstant);
                 dude.tintTaken[2] += diffB;
                 you.rgb[2] += diffB;
-                percentB = dude.tintTaken[2] / 255;
+                percentB = 1 - (dudeB - dude.tintTaken[2]) / 255;
             }
 
             dude.graphics.beginFill(0x000000);
