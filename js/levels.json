@@ -28,6 +28,7 @@
             "spritesheet": "assets/characterSheet/characterSheet.png",
             "dimensions": [311, 772],
             "scale": 0.1,
+            "additive": true,
             "animations": []
         }],
         "startColor": [0, 0, 0],
@@ -79,6 +80,7 @@
                 "spritesheet": "assets/characterSheet/characterSheet.png",
                 "dimensions": [311, 772],
                 "scale": 0.1,
+                "additive": true,
                 "animations": []
             },
             {
@@ -88,6 +90,7 @@
                 "spritesheet": "assets/characterSheet/characterSheet.png",
                 "dimensions": [311, 772],
                 "scale": 0.1,
+                "additive": true,
                 "animations": []
             },
             {
@@ -97,6 +100,7 @@
                 "spritesheet": "assets/characterSheet/characterSheet.png",
                 "dimensions": [311, 772],
                 "scale": 0.1,
+                "additive": true,
                 "animations": []
             }
 
@@ -150,6 +154,7 @@
                 "spritesheet": "assets/characterSheet/characterSheet.png",
                 "dimensions": [311, 772],
                 "scale": 0.1,
+            "additive": true,
                 "animations": []
             },
             {
@@ -159,6 +164,7 @@
                 "spritesheet": "assets/characterSheet/characterSheet.png",
                 "dimensions": [311, 772],
                 "scale": 0.1,
+            "additive": true,
                 "animations": []
             },
             {
@@ -168,6 +174,7 @@
                 "spritesheet": "assets/characterSheet/characterSheet.png",
                 "dimensions": [311, 772],
                 "scale": 0.1,
+            "additive": true,
                 "animations": []
             }
 
@@ -221,6 +228,7 @@
                 "spritesheet": "assets/characterSheet/characterSheet.png",
                 "dimensions": [311, 772],
                 "scale": 0.1,
+            "additive": true,
                 "animations": []
             },
             {
@@ -230,6 +238,7 @@
                 "spritesheet": "assets/characterSheet/characterSheet.png",
                 "dimensions": [311, 772],
                 "scale": 0.1,
+            "additive": true,
                 "animations": []
             },
             {
@@ -239,6 +248,7 @@
                 "spritesheet": "assets/characterSheet/characterSheet.png",
                 "dimensions": [311, 772],
                 "scale": 0.1,
+            "additive": true,
                 "animations": []
             }
 
@@ -292,6 +302,7 @@
                 "spritesheet": "assets/characterSheet/characterSheet.png",
                 "dimensions": [311, 772],
                 "scale": 0.1,
+            "additive": true,
                 "animations": []
             },
             {
@@ -301,6 +312,7 @@
                 "spritesheet": "assets/characterSheet/characterSheet.png",
                 "dimensions": [311, 772],
                 "scale": 0.1,
+            "additive": true,
                 "animations": []
             },
             {
@@ -310,6 +322,7 @@
                 "spritesheet": "assets/characterSheet/characterSheet.png",
                 "dimensions": [311, 772],
                 "scale": 0.1,
+            "additive": true,
                 "animations": []
             }
 
@@ -361,6 +374,7 @@
                 "spritesheet": "assets/characterSheet/characterSheet.png",
                 "dimensions": [311, 772],
                 "scale": 0.1,
+            "additive": true,
                 "animations": []
             },
             {
@@ -370,6 +384,7 @@
                 "spritesheet": "assets/characterSheet/characterSheet.png",
                 "dimensions": [311, 772],
                 "scale": 0.1,
+            "additive": true,
                 "animations": []
             },
             {
@@ -379,6 +394,7 @@
                 "spritesheet": "assets/characterSheet/characterSheet.png",
                 "dimensions": [311, 772],
                 "scale": 0.1,
+            "additive": true,
                 "animations": []
             }
 
@@ -432,6 +448,7 @@
                 "spritesheet": "assets/characterSheet/characterSheet.png",
                 "dimensions": [311, 772],
                 "scale": 0.1,
+            "additive": true,
                 "animations": []
             },
             {
@@ -441,6 +458,7 @@
                 "spritesheet": "assets/characterSheet/characterSheet.png",
                 "dimensions": [311, 772],
                 "scale": 0.1,
+            "additive": true,
                 "animations": []
             },
             {
@@ -450,6 +468,7 @@
                 "spritesheet": "assets/characterSheet/characterSheet.png",
                 "dimensions": [311, 772],
                 "scale": 0.1,
+            "additive": true,
                 "animations": []
             }
 
@@ -502,6 +521,7 @@
                 "spritesheet": "assets/characterSheet/characterSheet.png",
                 "dimensions": [311, 772],
                 "scale": 0.1,
+            "additive": true,
                 "animations": []
             },
             {
@@ -511,6 +531,7 @@
                 "spritesheet": "assets/characterSheet/characterSheet.png",
                 "dimensions": [311, 772],
                 "scale": 0.1,
+            "additive": true,
                 "animations": []
             },
             {
@@ -520,6 +541,7 @@
                 "spritesheet": "assets/characterSheet/characterSheet.png",
                 "dimensions": [311, 772],
                 "scale": 0.1,
+            "additive": true,
                 "animations": []
             },
             {
@@ -529,6 +551,7 @@
                 "spritesheet": "assets/characterSheet/characterSheet.png",
                 "dimensions": [311, 772],
                 "scale": 0.1,
+            "additive": true,
                 "animations": []
             }
 
