@@ -8,21 +8,39 @@ $(document).ready(function()
     });
 
     var youBlock;
+    var arrowKeys;
 
     function preload()
     {
-        game.load.image('bg', 'assets/testbg.png');
-        game.load.image('youTile', 'assets/testbg.png', 10, 10);
+        // game.load.image('bg', 'assets/testbg.png');
+        // game.load.image('youTile', 'assets/testbg.png', 10, 10);
     }
 
     function create()
     {
-        youBlock = game.make.bitmapData();
-        youBlock.load('youTile');
-        youBlock.addToWorld(game.world.centerX, game.world.centerY, 0.5, 0.5, 0.05, 0.05);
-        youBlock.replaceRGB(0, 0, 0, 255, 200, 200, 200, 255);
+        // youBlock = game.add.sprite(100, 100, 'youTile');
+        // youBlock.tint = 0x999999;
+        arrowKeys = [game.input.keyboard.addKey(Phaser.Keyboard.UP), game.input.keyboard.addKey(Phaser.Keyboard.DOWN), game.input.keyboard.addKey(Phaser.Keyboard.LEFT), game.input.keyboard.addKey(Phaser.Keyboard.RIGHT)];
     }
 
     function update()
-    {}
+    {
+        if (arrowKeys[0].isDown)
+        {
+            youBlock.setTransform(0, 1, 1, 1, 0, 0);
+        }
+        else if (arrowKeys[1].isDown)
+        {
+            youBlock.setTransform(0, -1, 1, 1, 0, 0);
+        }
+
+        if (arrowKeys[2].isDown)
+        {
+            youBlock.setTransform(1, 0, 1, 1, 0, 0);
+        }
+        else if (arrowKeys[3].isDown)
+        {
+            youBlock.setTransform(-1, 0, 1, 1, 0, 0);
+        }
+    }
 })
