@@ -5,8 +5,8 @@ requirejs.config(
 
 
 
-requirejs(['phaser', 'util', 'boot','gametitle','preload','level'],
-    function(phaser, util, boot,gametitle, preload, level)
+requirejs(['phaser', 'util', 'boot','gametitle','howto','preload','level'],
+    function(phaser, util, boot,gametitle, howto, preload, level)
     {
 
 
@@ -24,6 +24,7 @@ requirejs(['phaser', 'util', 'boot','gametitle','preload','level'],
               game.state.add("Boot", this.boot);
               game.state.add("Preload", this.preload);
               game.state.add("GameTitle", this.gametitle);
+              game.state.add("HowTo", this.howto);
               game.state.add("Level", this.level);
               game.state.start("Boot", true, false, levels);
         
