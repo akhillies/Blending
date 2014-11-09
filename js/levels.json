@@ -1,6 +1,7 @@
 [
     {
         "numPeople": 1,
+        "numlevel": 1,
         "player":
         {
             "name": "Player",
@@ -53,6 +54,7 @@
 
     {
         "numPeople": 3,
+        "numlevel": 2,
         "player":
         {
             "name": "Player",
@@ -127,6 +129,7 @@
 
     {
         "numPeople": 3,
+        "numlevel": 3,
         "player":
         {
             "name": "Player",
@@ -193,7 +196,7 @@
             "scale": 0.1,
             "animations": []
         },
-        "threshold": 10,
+        "threshold": 17,
         "audio": ["assets/audio/bgMusic.mp3", "assets/audio/bgMusic.ogg"]
         },
 
@@ -201,6 +204,7 @@
 
     {
         "numPeople": 3,
+        "numlevel": 4,
         "player":
         {
             "name": "Player",
@@ -233,7 +237,7 @@
             },
             {
                 "name": "Green",
-                "color": [255, 0, 0],
+                "color": [0, 255, 0],
                 "pos": [512, 150],
                 "spritesheet": "assets/characterSheet/characterSheet.png",
                 "dimensions": [311, 772],
@@ -243,7 +247,7 @@
             },
             {
                 "name": "Blue",
-                "color": [255, 0, 0],
+                "color": [0, 255, 0],
                 "pos": [712, 150],
                 "spritesheet": "assets/characterSheet/characterSheet.png",
                 "dimensions": [311, 772],
@@ -275,6 +279,7 @@
 
     {
         "numPeople": 3,
+        "numlevel": 5,
         "player":
         {
             "name": "Player",
