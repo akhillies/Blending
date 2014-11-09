@@ -17,7 +17,7 @@ level.prototype = {
     {
         console.log(curlvl);
         this.levels = levels;
-        this.curlvl = curlvl;
+        this.curlvl = 1; //curlvl;
     },
 
     preload: function()
@@ -47,22 +47,19 @@ level.prototype = {
         var bg = this.game.add.sprite(0, 0, "bg");
         arrowKeys = this.game.input.keyboard.createCursorKeys();
 
-        youRGB = this.game.add.text(25,
-            250,
-            "Your RGB Values\nRed: " + player.color[0] + "\nGreen: " + player.color[1] + "\nBlue: " + player.color[2],
-            {
-                font: "15px Arial",
-                fill: "#" + Phaser.Color.getColor(player.color[0], player.color[1], player.color[2]).toString(16),
-                align: "center"
-            });
-        goalRGB = this.game.add.text(850,
-            250,
-            "Guard's RGB Values\nRed: " + guard.color[0] + "\nGreen: " + guard.color[1] + "\nBlue: " + guard.color[2],
-            {
-                font: "15px Arial",
-                fill: "#" + Phaser.Color.getColor(guard.color[0], guard.color[1], guard.color[2]).toString(16),
-                align: "center"
-            });
+        youRGB = this.game.add.text(25, 275,
+            "Your RGB Values\nRed: " + player.color[0] + "\nGreen: " + player.color[1] + "\nBlue: " + player.color[2]);
+        youRGB.fill = "#" + Phaser.Color.getColor(player.color[0], player.color[1], player.color[2]).toString(16);
+        youRGB.align = "center";
+        youRGB.setShadow(0, 0, 'rgba(50,50,50,1)', 5);
+        youRGB.font = "Arial";
+
+        goalRGB = this.game.add.text(700, 275,
+            "Guard's RGB Values\nRed: " + guard.color[0] + "\nGreen: " + guard.color[1] + "\nBlue: " + guard.color[2]);
+        goalRGB.fill = "#" + Phaser.Color.getColor(guard.color[0], guard.color[1], guard.color[2]).toString(16),
+        goalRGB.align = "center";
+        goalRGB.setShadow(0, 0, 'rgba(50,50,50,1)', 5);
+        goalRGB.font = "Arial";
 
         thePeople = this.game.add.group();
         thePeople.enableBody = true;
@@ -106,7 +103,7 @@ level.prototype = {
         youRGB.setText("Your RGB Values\nRed: " + Phaser.Color.getRed(youBlock.tint) +
             "\nGreen: " + Phaser.Color.getGreen(youBlock.tint) +
             "\nBlue: " + Phaser.Color.getBlue(youBlock.tint));
-        youRGB.style.fill = "#" + Phaser.Color.getColor(Phaser.Color.getRed(youBlock.tint), Phaser.Color.getGreen(youBlock.tint), Phaser.Color.getBlue(youBlock.tint)).toString(16);
+        youRGB.fill = "#" + Phaser.Color.getColor(Phaser.Color.getRed(youBlock.tint), Phaser.Color.getGreen(youBlock.tint), Phaser.Color.getBlue(youBlock.tint)).toString(16);
         // if (arrowKeys.up.isDown)
         // {
         //     youBlock.y -= moveSpeed;
