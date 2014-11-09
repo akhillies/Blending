@@ -46,6 +46,7 @@ requirejs(['phaser', 'util'],
             var goalBlock;
             var youRGB;
             var goalRGB;
+            var bgmusic
 
             function preload()
             {
@@ -56,10 +57,14 @@ requirejs(['phaser', 'util'],
                 {
                     game.load.spritesheet(people[i].name, people[i].spritesheet, people[i].dimensions[0], people[i].dimensions[1]);
                 }
+                game.load.audio('bgaudio', lvl.audio);
             }
 
             function create()
             {
+                bgmusic = game.add.audio('bgaudio');
+                bgmusic.play();
+
                 var bg = game.add.sprite(0, 0, "bg");
                 arrowKeys = game.input.keyboard.createCursorKeys();
 
