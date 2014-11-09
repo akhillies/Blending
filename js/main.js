@@ -9,70 +9,96 @@ $(document).ready(function()
 
     var youBlock;
     var arrowKeys;
-    var wasdKeys;
+    var thePeople;
+    var colorConstant;
 
     function preload()
     {
-        // game.load.image('bg', 'assets/testbg.png');
         game.load.image('youTile', 'assets/testbg.png');
     }
 
     function create()
     {
+        arrowKeys = game.input.keyboard.createCursorKeys();
+
+        colorConstant = 1;
+
+        thePeople = game.add.group();
+        thePeople.enableBody = true;
+
+        for (var i = 0; i < 9; i++)
+        {
+            var thePerson = thePeople.create(i * 100, 150, 'youTile');
+            thePerson.tint = Math.random() * 0xffffff;
+            thePerson.width = 50;
+            thePerson.height = 50;
+            thePerson.tintTaken = [0, 0, 0];
+        }
+
         youBlock = game.add.sprite(0, 0, 'youTile');
-        youBlock.tint = 0x111111;
+        youBlock.tint = 0x000000;
         youBlock.width = 50;
         youBlock.height = 50;
+        youBlock.rgb = [0, 0, 0];
         game.physics.arcade.enable(youBlock)
         youBlock.body.collideWorldBounds = true;
-
-        arrowKeys = game.input.keyboard.createCursorKeys();
-        wasdKeys = [game.input.keyboard.addKey(Phaser.Keyboard.W), game.input.keyboard.addKey(Phaser.Keyboard.A), game.input.keyboard.addKey(Phaser.Keyboard.S), game.input.keyboard.addKey(Phaser.Keyboard.D)];
     }
 
     function update()
     {
+        game.physics.arcade.overlap(youBlock, thePeople, shiftColor, null, this);
+
         if (arrowKeys.up.isDown)
         {
-            youBlock.y -= 1;
+            youBlock.y -= 2;
         }
         else if (arrowKeys.down.isDown)
         {
-            youBlock.y += 1;
+            youBlock.y += 2;
         }
 
         if (arrowKeys.left.isDown)
         {
-            youBlock.x -= 1;
+            youBlock.x -= 2;
         }
         else if (arrowKeys.right.isDown)
         {
-            youBlock.x += 1;
+            youBlock.x += 2;
         }
+    }
 
-        if (wasdKeys[0].isDown) //w
+    function shiftColor(you, dude)
+    {
+        var youR = Phaser.Color.getRed(you.tint);
+        var youG = Phaser.Color.getGreen(you.tint);
+        var youB = Phaser.Color.getBlue(you.tint);
+        var dudeR = Phaser.Color.getRed(dude.tint);
+        var dudeG = Phaser.Color.getGreen(dude.tint);
+        var dudeB = Phaser.Color.getBlue(dude.tint);
+        var diffR = 0;
+        if (dude.tintTaken[0] <= dudeR)
         {
-            console.log("\nbefore w: 0x" + youBlock.tint.toString(16));
-            youBlock.tint += 0x111111;
-            console.log("after w: 0x" + youBlock.tint.toString(16));
+            diffR += dudeR / 255 * colorConstant;
+            dude.tintTaken[0] += diffR;
+            you.rgb[0] += diffR;
         }
-        else if (wasdKeys[1].isDown) //a
+        var diffG = 0;
+        if (dude.tintTaken[1] <= dudeG)
         {
-            console.log("\nbefore a: 0x" + youBlock.tint.toString(16));
-            youBlock.tint -= 0x010101;
-            console.log("after a: 0x" + youBlock.tint.toString(16));
+            diffG += dudeG / 255 * colorConstant;
+            dude.tintTaken[1] += diffG;
+            you.rgb[1] += diffG;
         }
-        else if (wasdKeys[2].isDown) //s
+        var diffB = 0;
+        if (dude.tintTaken[2] <= dudeB)
         {
-            console.log("\nbefore s: 0x" + youBlock.tint.toString(16));
-            youBlock.tint -= 0x111111;
-            console.log("after s: 0x" + youBlock.tint.toString(16));
+            diffB += dudeB / 255 * colorConstant;
+            dude.tintTaken[2] += diffB;
+            you.rgb[2] += diffB;
         }
-        else if (wasdKeys[3].isDown) //d
-        {
-            console.log("\nbefore d: 0x" + youBlock.tint.toString(16));
-            youBlock.tint += 0x010101;
-            console.log("after d: 0x" + youBlock.tint.toString(16));
-        }
+        var newR = Math.min(255, you.rgb[0] + diffR);
+        var newG = Math.min(255, you.rgb[1] + diffG);
+        var newB = Math.min(255, you.rgb[2] + diffB);
+        you.tint = Phaser.Color.getColor(newR, newG, newB);
     }
 })
