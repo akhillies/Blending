@@ -9,38 +9,70 @@ $(document).ready(function()
 
     var youBlock;
     var arrowKeys;
+    var wasdKeys;
 
     function preload()
     {
         // game.load.image('bg', 'assets/testbg.png');
-        // game.load.image('youTile', 'assets/testbg.png', 10, 10);
+        game.load.image('youTile', 'assets/testbg.png');
     }
 
     function create()
     {
-        // youBlock = game.add.sprite(100, 100, 'youTile');
-        // youBlock.tint = 0x999999;
-        arrowKeys = [game.input.keyboard.addKey(Phaser.Keyboard.UP), game.input.keyboard.addKey(Phaser.Keyboard.DOWN), game.input.keyboard.addKey(Phaser.Keyboard.LEFT), game.input.keyboard.addKey(Phaser.Keyboard.RIGHT)];
+        youBlock = game.add.sprite(0, 0, 'youTile');
+        youBlock.tint = 0x111111;
+        youBlock.width = 50;
+        youBlock.height = 50;
+        game.physics.arcade.enable(youBlock)
+        youBlock.body.collideWorldBounds = true;
+
+        arrowKeys = game.input.keyboard.createCursorKeys();
+        wasdKeys = [game.input.keyboard.addKey(Phaser.Keyboard.W), game.input.keyboard.addKey(Phaser.Keyboard.A), game.input.keyboard.addKey(Phaser.Keyboard.S), game.input.keyboard.addKey(Phaser.Keyboard.D)];
     }
 
     function update()
     {
-        if (arrowKeys[0].isDown)
+        if (arrowKeys.up.isDown)
         {
-            youBlock.setTransform(0, 1, 1, 1, 0, 0);
+            youBlock.y -= 1;
         }
-        else if (arrowKeys[1].isDown)
+        else if (arrowKeys.down.isDown)
         {
-            youBlock.setTransform(0, -1, 1, 1, 0, 0);
+            youBlock.y += 1;
         }
 
-        if (arrowKeys[2].isDown)
+        if (arrowKeys.left.isDown)
         {
-            youBlock.setTransform(1, 0, 1, 1, 0, 0);
+            youBlock.x -= 1;
         }
-        else if (arrowKeys[3].isDown)
+        else if (arrowKeys.right.isDown)
         {
-            youBlock.setTransform(-1, 0, 1, 1, 0, 0);
+            youBlock.x += 1;
+        }
+
+        if (wasdKeys[0].isDown) //w
+        {
+            console.log("\nbefore w: 0x" + youBlock.tint.toString(16));
+            youBlock.tint += 0x111111;
+            console.log("after w: 0x" + youBlock.tint.toString(16));
+        }
+        else if (wasdKeys[1].isDown) //a
+        {
+            console.log("\nbefore a: 0x" + youBlock.tint.toString(16));
+            youBlock.tint -= 0x010101;
+            console.log("after a: 0x" + youBlock.tint.toString(16));
+        }
+        else if (wasdKeys[2].isDown) //s
+        {
+            console.log("\nbefore s: 0x" + youBlock.tint.toString(16));
+            youBlock.tint -= 0x111111;
+            console.log("after s: 0x" + youBlock.tint.toString(16));
+        }
+        else if (wasdKeys[3].isDown) //d
+        {
+            console.log("\nbefore d: 0x" + youBlock.tint.toString(16));
+            youBlock.tint += 0x010101;
+            console.log("after d: 0x" + youBlock.tint.toString(16));
         }
     }
 })
