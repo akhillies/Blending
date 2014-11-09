@@ -227,21 +227,21 @@ level.prototype = {
             var percentG = 1;
             var percentB = 1;
 
-            if (dude.tintTaken[0] >= dudeR)
+            if (dude.tintTaken[0] > dudeR)
             {
                 diffR += Math.max(0 - you.rgb[0], dudeR / 255 * player.colorConstant);
                 dude.tintTaken[0] += diffR;
                 you.rgb[0] += diffR;
                 percentR = (255 + dude.tintTaken[0]) / 255;
             }
-            if (dude.tintTaken[1] >= dudeG)
+            if (dude.tintTaken[1] > dudeG)
             {
                 diffG += Math.max(0 - you.rgb[1], dudeG / 255 * player.colorConstant);
                 dude.tintTaken[1] += diffG;
                 you.rgb[1] += diffG;
                 percentG = (255 + dude.tintTaken[1]) / 255;
             }
-            if (dude.tintTaken[2] >= dudeB)
+            if (dude.tintTaken[2] > dudeB)
             {
                 diffB += Math.max(0 - you.rgb[2], dudeB / 255 * player.colorConstant);
                 dude.tintTaken[2] += diffB;
