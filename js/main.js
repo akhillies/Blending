@@ -2,16 +2,24 @@ requirejs.config({
   baseUrl:'js' 
 });
 
-var levelno;
+var levelno=0;
+
 
 requirejs(['phaser', 'util'],
   function(phaser, util){
 
   
 
-  $(document).ready(startGame);
-    function startGame()
-  {
+  $(document).ready(function(){
+    $.get('js/levels.json', function(data){
+      console.log(data);
+      startGame(data);
+      
+    });
+    })
+
+    
+    function startGame(levels){
       var game = new Phaser.Game(1024, 768, Phaser.AUTO, '',
       {
           preload: preload,
@@ -19,44 +27,15 @@ requirejs(['phaser', 'util'],
           update: update
       });
 
-      //var Level = Levels[levelno];
+      var lvl = levels[levelno];
+      var people = lvl.people;
+      var guard = lvl.guard;
+      var player = lvl.player;
+      
 
-      var numPeople = 5;
-      var peopleColors = [
-          [Math.random() * 0xffffff, Math.random() * 0xffffff, Math.random() * 0xffffff],
-          [Math.random() * 0xffffff, Math.random() * 0xffffff, Math.random() * 0xffffff],
-          [Math.random() * 0xffffff, Math.random() * 0xffffff, Math.random() * 0xffffff],
-          [Math.random() * 0xffffff, Math.random() * 0xffffff, Math.random() * 0xffffff],
-          [Math.random() * 0xffffff, Math.random() * 0xffffff, Math.random() * 0xffffff],
-          [Math.random() * 0xffffff, Math.random() * 0xffffff, Math.random() * 0xffffff],
-          [Math.random() * 0xffffff, Math.random() * 0xffffff, Math.random() * 0xffffff],
-          [Math.random() * 0xffffff, Math.random() * 0xffffff, Math.random() * 0xffffff],
-          [Math.random() * 0xffffff, Math.random() * 0xffffff, Math.random() * 0xffffff],
-          [Math.random() * 0xffffff, Math.random() * 0xffffff, Math.random() * 0xffffff]
-      ];
-      var peopleXPos = [
-          125,
-          900 / numPeople + 125,
-          1800 / numPeople + 125,
-          2700 / numPeople + 125,
-          3600 / numPeople + 125,
-          4500 / numPeople + 125,
-          5400 / numPeople + 125,
-          6300 / numPeople + 125,
-          7200 / numPeople + 125,
-          8100 / numPeople + 125
-      ];
-      var peopleYPos = 150;
-      var goalColor = [255, 255, 255];
-      var startColor = [255, 255, 255];
-      var range = 0;
 
       var colorConstant = .5;
-      var chScale = .1;
       var moveSpeed = 2;
-      var stopAnim = 2;
-      var animOrder = [4, 3, 2, 1, 0];
-      var framesPerWalk = 18;
 
       var youBlock;
       var arrowKeys;
@@ -65,42 +44,49 @@ requirejs(['phaser', 'util'],
 
       function preload()
       {
-          game.load.image('goalTile', 'assets/testbg.png');
-          game.load.spritesheet('youTile', 'assets/characterSheet/characterSheet.png', 311, 772);
+          game.load.image("bg", lvl.background);
+          game.load.spritesheet(guard.name, guard.spritesheet, guard.dimensions[0], guard.dimensions[1]);
+          game.load.spritesheet(player.name, player.spritesheet, player.dimensions[0], player.dimensions[1]);
+          for(var i = 0; i < lvl.numPeople; i++){
+            game.load.spritesheet(people[i].name, people[i].spritesheet, people[i].dimensions[0], people[i].dimensions[1]);
+          }
       }
 
       function create()
       {
+          var bg = game.add.sprite(0,0,"bg");
           arrowKeys = game.input.keyboard.createCursorKeys();
 
           thePeople = game.add.group();
           thePeople.enableBody = true;
 
-          for (var i = 0; i < numPeople; i++)
+          for (var i = 0; i < lvl.numPeople; i++)
           {
-              var thePerson = thePeople.create(peopleXPos[i], peopleYPos, 'youTile');
-              thePerson.tint = Phaser.Color.getColor(peopleColors[i][0], peopleColors[i][1], peopleColors[i][2]);
-              thePerson.scale.x = chScale;
-              thePerson.scale.y = chScale;
+              var thePerson = thePeople.create(people[i].pos[0], people[i].pos[1], people[i].name);
+              thePerson.tint = Phaser.Color.getColor(people[i].color[0], people[i].color[1], people[i].color[2]);
+              thePerson.scale.x = people[i].scale;
+              thePerson.scale.y = people[i].scale;
               thePerson.tintTaken = [0, 0, 0];
           }
 
-          goalBlock = game.add.sprite(1000, peopleYPos, 'goalTile');
-          goalBlock.tint = Phaser.Color.getColor(goalColor[0], goalColor[1], goalColor[2]);
-          goalBlock.scale.x = chScale;
-          goalBlock.scale.y = chScale;
+          goalBlock = game.add.sprite(guard.pos[0], guard.pos[1], guard.name);
+          goalBlock.tint = Phaser.Color.getColor(guard.color[0], guard.color[1], guard.color[2]);
+          goalBlock.scale.x = guard.scale;
+          goalBlock.scale.y = guard.scale;
           game.physics.arcade.enable(goalBlock)
 
-          youBlock = game.add.sprite(0, peopleYPos, 'youTile');
-          youBlock.tint = Phaser.Color.getColor(startColor[0], startColor[1], startColor[2]);
-          youBlock.scale.x = chScale;
-          youBlock.scale.y = chScale;
+          youBlock = game.add.sprite(player.pos[0], player.pos[1], player.name);
+          youBlock.tint = Phaser.Color.getColor(player.color[0], player.color[1], player.color[2]);
+          youBlock.scale.x = player.scale;
+          youBlock.scale.y = player.scale;
           youBlock.anchor.setTo(0.5, 0);
-          youBlock.rgb = [startColor[0], startColor[1], startColor[2]];
+          youBlock.rgb = [player.color[0], player.color[1], player.color[2]];
           game.physics.arcade.enable(youBlock)
           youBlock.body.collideWorldBounds = true;
 
-          youBlock.animations.add('walk', animOrder, framesPerWalk, true);
+          for(var i = 0; i < player.animations.length; i++){
+            youBlock.animations.add(player.animations[i].name, player.animations[i].order, player.animations.framerate, player.animations[i].loop);
+          }
       }
 
       function update()
@@ -121,18 +107,18 @@ requirejs(['phaser', 'util'],
           {
               youBlock.x -= moveSpeed;
               youBlock.animations.play('walk');
-              youBlock.scale.x = -chScale;
+              youBlock.scale.x = -player.scale;
           }
           else if (arrowKeys.right.isDown)
           {
               youBlock.x += moveSpeed;
               youBlock.animations.play('walk');
-              youBlock.scale.x = chScale;
+              youBlock.scale.x = player.scale;
           }
           else
           {
               youBlock.animations.stop();
-              youBlock.frame = stopAnim;
+              youBlock.frame = player.stillFrame;
           }
       }
 
@@ -173,7 +159,14 @@ requirejs(['phaser', 'util'],
 
       function finishColor(you, goal)
       {
-          if (you.tint >= goal.tint - range && you.tint <= goal.tint + range)
+          var youR = Phaser.Color.getRed(you.tint);
+          var youG = Phaser.Color.getGreen(you.tint);
+          var youB = Phaser.Color.getBlue(you.tint);
+          var goalR = Phaser.Color.getRed(goal.tint);
+          var goalG = Phaser.Color.getGreen(goal.tint);
+          var goalB = Phaser.Color.getBlue(goal.tint);
+
+          if (youR >= goalR - lvl.threshold && youR <= goalR + lvl.threshold && youG >= goalG - lvl.threshold && youG <= goalG + lvl.threshold && youB >= goalB - lvl.threshold && youB <= goalB + lvl.threshold)
           {
               thePeople.callAll('kill');
               youBlock.kill();
