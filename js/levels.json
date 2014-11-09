@@ -114,10 +114,10 @@
         "guard":
         {
             "name": "Guard",
-            "color": [255, 255, 255],
-            "pos": [1000, 150],
+            "color": [150, 0, 0],
+            "pos": [975, 150],
             "spritesheet": "assets/guard.png",
-            "dimensions": [311, 772],
+            "dimensions": [309, 768],
             "scale": 0.1,
             "animations": []
         },
@@ -189,10 +189,10 @@
         "guard":
         {
             "name": "Guard",
-            "color": [127, 0, 127],
-            "pos": [1000, 150],
+            "color": [150, 0, 0],
+            "pos": [975, 150],
             "spritesheet": "assets/guard.png",
-            "dimensions": [311, 772],
+            "dimensions": [309, 768],
             "scale": 0.1,
             "animations": []
         },
@@ -264,10 +264,10 @@
         "guard":
         {
             "name": "Guard",
-            "color": [127, 127, 127],
-            "pos": [1000, 150],
+            "color": [150, 0, 0],
+            "pos": [975, 150],
             "spritesheet": "assets/guard.png",
-            "dimensions": [311, 772],
+            "dimensions": [309, 768],
             "scale": 0.1,
             "animations": []
         },
@@ -339,10 +339,10 @@
         "guard":
         {
             "name": "Guard",
-            "color": [255, 127, 64],
-            "pos": [1000, 150],
+            "color": [150, 0, 0],
+            "pos": [975, 150],
             "spritesheet": "assets/guard.png",
-            "dimensions": [311, 772],
+            "dimensions": [309, 768],
             "scale": 0.1,
             "animations": []
         },
@@ -412,10 +412,10 @@
         "guard":
         {
             "name": "Guard",
-            "color": [128, 64, 64],
-            "pos": [1000, 150],
+            "color": [150, 0, 0],
+            "pos": [975, 150],
             "spritesheet": "assets/guard.png",
-            "dimensions": [311, 772],
+            "dimensions": [309, 768],
             "scale": 0.1,
             "animations": []
         },
@@ -487,10 +487,10 @@
         "guard":
         {
             "name": "Guard",
-            "color": [51, 72, 150],
-            "pos": [1000, 150],
+            "color": [150, 0, 0],
+            "pos": [975, 150],
             "spritesheet": "assets/guard.png",
-            "dimensions": [311, 772],
+            "dimensions": [309, 768],
             "scale": 0.1,
             "animations": []
         },
@@ -571,8 +571,8 @@
         "guard":
         {
             "name": "Guard",
-            "color": [255, 64, 90],
-            "pos": [1000, 150],
+            "color": [150, 0, 0],
+            "pos": [975, 150],
             "spritesheet": "assets/guard.png",
             "dimensions": [309, 768],
             "scale": 0.1,
@@ -646,8 +646,8 @@
         "guard":
         {
             "name": "Guard",
-            "color": [255, 127, 0],
-            "pos": [1000, 150],
+            "color": [150, 0, 0],
+            "pos": [975, 150],
             "spritesheet": "assets/guard.png",
             "dimensions": [309, 768],
             "scale": 0.1,
