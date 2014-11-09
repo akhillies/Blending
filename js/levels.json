@@ -247,7 +247,7 @@
             },
             {
                 "name": "Blue",
-                "color": [0, 255, 0],
+                "color": [0, 0, 255],
                 "pos": [712, 150],
                 "spritesheet": "assets/characterSheet/characterSheet.png",
                 "dimensions": [311, 772],
