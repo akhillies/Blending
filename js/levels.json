@@ -114,7 +114,7 @@
         "guard":
         {
             "name": "Guard",
-            "color": [150, 0, 0],
+            "color": [255, 255, 255],
             "pos": [975, 150],
             "spritesheet": "assets/guard.png",
             "dimensions": [309, 768],
@@ -189,7 +189,7 @@
         "guard":
         {
             "name": "Guard",
-            "color": [150, 0, 0],
+            "color": [127, 0, 127],
             "pos": [975, 150],
             "spritesheet": "assets/guard.png",
             "dimensions": [309, 768],
@@ -264,7 +264,7 @@
         "guard":
         {
             "name": "Guard",
-            "color": [150, 0, 0],
+            "color": [127, 127, 127],
             "pos": [975, 150],
             "spritesheet": "assets/guard.png",
             "dimensions": [309, 768],
@@ -339,7 +339,7 @@
         "guard":
         {
             "name": "Guard",
-            "color": [150, 0, 0],
+            "color": [255, 127, 64],
             "pos": [975, 150],
             "spritesheet": "assets/guard.png",
             "dimensions": [309, 768],
@@ -412,7 +412,7 @@
         "guard":
         {
             "name": "Guard",
-            "color": [150, 0, 0],
+            "color": [128, 64, 64],
             "pos": [975, 150],
             "spritesheet": "assets/guard.png",
             "dimensions": [309, 768],
@@ -487,7 +487,7 @@
         "guard":
         {
             "name": "Guard",
-            "color": [150, 0, 0],
+            "color": [51, 72, 150],
             "pos": [975, 150],
             "spritesheet": "assets/guard.png",
             "dimensions": [309, 768],
@@ -571,7 +571,7 @@
         "guard":
         {
             "name": "Guard",
-            "color": [150, 0, 0],
+            "color": [255, 64, 90],
             "pos": [975, 150],
             "spritesheet": "assets/guard.png",
             "dimensions": [309, 768],
@@ -646,7 +646,7 @@
         "guard":
         {
             "name": "Guard",
-            "color": [150, 0, 0],
+            "color": [255, 127, 0],
             "pos": [975, 150],
             "spritesheet": "assets/guard.png",
             "dimensions": [309, 768],
