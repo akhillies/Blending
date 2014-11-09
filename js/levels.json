@@ -1,118 +1,121 @@
 [
-{
-    "numPeople": 1,
-    "player":
     {
-        "name": "Player",
-        "color": [0, 0, 0],
-        "pos": [0, 150],
-        "spritesheet": "assets/characterSheet/characterSheet.png",
-        "dimensions": [311, 772],
-        "scale": 0.1,
-        "animations": [
+        "numPeople": 1,
+        "player":
         {
-            "name": "walk",
-            "order": [4, 3, 2, 1, 0],
-            "framerate": 18,
-            "loop": true,
-            "stillFrame": 2
-        }]
-    },
-    "people": [
-    {
-        "name": "Red",
-        "color": [255, 0, 0],
-        "pos": [512, 150],
-        "spritesheet": "assets/characterSheet/characterSheet.png",
-        "dimensions": [311, 772],
-        "scale": 0.1,
-        "animations": []
-    }],
-
-    "startColor": [0, 0, 0],
-    "background": "assets/testbg.png",
-    "startPos": [0, 150],
-    "guard":
-    {
-        "name": "Guard",
-        "color": [150, 0, 0],
-        "pos": [1000, 150],
-        "spritesheet": "assets/characterSheet/characterSheet.png",
-        "dimensions": [311, 772],
-        "scale": 0.1,
-        "animations": []
-    },
-    "threshold": 10,
-    "audio": "assets/audio/bgMusic.mp3"
-
-},
-
-
-
-{
-    "numPeople": 3,
-    "player":
-    {
-        "name": "Player",
-        "color": [0, 0, 0],
-        "pos": [0, 150],
-        "spritesheet": "assets/characterSheet/characterSheet.png",
-        "dimensions": [311, 772],
-        "scale": 0.1,
-        "animations": [
+            "name": "Player",
+            "color": [0, 0, 0],
+            "pos": [0, 150],
+            "spritesheet": "assets/characterSheet/characterSheet.png",
+            "dimensions": [311, 772],
+            "scale": 0.1,
+            "colorConstant": 0.5,
+            "moveSpeed": 2,
+            "animations": [
+            {
+                "name": "walk",
+                "order": [4, 3, 2, 1, 0],
+                "framerate": 18,
+                "loop": true,
+                "stillFrame": 2
+            }]
+        },
+        "people": [
         {
-            "name": "walk",
-            "order": [4, 3, 2, 1, 0],
-            "framerate": 18,
-            "loop": true,
-            "stillFrame": 2
-        }]
-    },
-    
-    "people": [
-    {
-        "name": "Red",
-        "color": [255, 0, 0],
-        "pos": [312, 150],
-        "spritesheet": "assets/characterSheet/characterSheet.png",
-        "dimensions": [311, 772],
-        "scale": 0.1,
-        "animations": []
-    },
-    {
-        "name": "Green",
-        "color": [0, 255, 0],
-        "pos": [512, 150],
-        "spritesheet": "assets/characterSheet/characterSheet.png",
-        "dimensions": [311, 772],
-        "scale": 0.1,
-        "animations": []
-    },
-    {
-        "name": "Blue",
-        "color": [0, 0, 255],
-        "pos": [712, 150],
-        "spritesheet": "assets/characterSheet/characterSheet.png",
-        "dimensions": [311, 772],
-        "scale": 0.1,
-        "animations": []
-    }
-    ],
+            "name": "Red",
+            "color": [255, 0, 0],
+            "pos": [512, 150],
+            "spritesheet": "assets/characterSheet/characterSheet.png",
+            "dimensions": [311, 772],
+            "scale": 0.1,
+            "animations": []
+        }],
+        "startColor": [0, 0, 0],
+        "background": "assets/testbg.png",
+        "startPos": [0, 150],
+        "guard":
+        {
+            "name": "Guard",
+            "color": [150, 0, 0],
+            "pos": [975, 150],
+            "spritesheet": "assets/characterSheet/characterSheet.png",
+            "dimensions": [311, 772],
+            "scale": 0.1,
+            "animations": []
+        },
+        "threshold": 10,
+        "audio": "assets/audio/bgMusic.mp3"
 
-    "startColor": [0, 0, 0],
-    "background": "assets/testbg.png",
-    "startPos": [0, 150],
-    "guard":
-    {
-        "name": "Guard",
-        "color": [255, 255, 255],
-        "pos": [1000, 150],
-        "spritesheet": "assets/characterSheet/characterSheet.png",
-        "dimensions": [311, 772],
-        "scale": 0.1,
-        "animations": []
     },
-    "threshold": 10,
-    "audio": ["assets/audio/bgMusic.mp3", "assets/audio/bgMusic.ogg"]
 
-}]
+
+
+    {
+        "numPeople": 3,
+        "player":
+        {
+            "name": "Player",
+            "color": [0, 0, 0],
+            "pos": [0, 150],
+            "spritesheet": "assets/characterSheet/characterSheet.png",
+            "dimensions": [311, 772],
+            "scale": 0.1,
+            "colorConstant": 0.5,
+            "moveSpeed": 2,
+            "animations": [
+            {
+                "name": "walk",
+                "order": [4, 3, 2, 1, 0],
+                "framerate": 18,
+                "loop": true,
+                "stillFrame": 2
+            }]
+        },
+        "people": [
+            {
+                "name": "Red",
+                "color": [255, 0, 0],
+                "pos": [512, 150],
+                "spritesheet": "assets/characterSheet/characterSheet.png",
+                "dimensions": [311, 772],
+                "scale": 0.1,
+                "animations": []
+            },
+            {
+                "name": "Green",
+                "color": [255, 0, 0],
+                "pos": [512, 150],
+                "spritesheet": "assets/characterSheet/characterSheet.png",
+                "dimensions": [311, 772],
+                "scale": 0.1,
+                "animations": []
+            },
+            {
+                "name": "Blue",
+                "color": [255, 0, 0],
+                "pos": [512, 150],
+                "spritesheet": "assets/characterSheet/characterSheet.png",
+                "dimensions": [311, 772],
+                "scale": 0.1,
+                "animations": []
+            }
+
+        ],
+
+        "startColor": [0, 0, 0],
+        "background": "assets/testbg.png",
+        "startPos": [0, 150],
+        "guard":
+        {
+            "name": "Guard",
+            "color": [150, 0, 0],
+            "pos": [1000, 150],
+            "spritesheet": "assets/characterSheet/characterSheet.png",
+            "dimensions": [311, 772],
+            "scale": 0.1,
+            "animations": []
+        },
+        "threshold": 10,
+        "audio": ["assets/audio/bgMusic.mp3", "assets/audio/bgMusic.ogg"]
+}
+]
