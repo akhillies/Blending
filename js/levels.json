@@ -38,8 +38,8 @@
             "name": "Guard",
             "color": [150, 0, 0],
             "pos": [975, 150],
-            "spritesheet": "assets/characterSheet/characterSheet.png",
-            "dimensions": [311, 772],
+            "spritesheet": "assets/guard.png",
+            "dimensions": [309, 768],
             "scale": 0.1,
             "animations": []
         },
@@ -110,8 +110,8 @@
             "name": "Guard",
             "color": [150, 0, 0],
             "pos": [1000, 150],
-            "spritesheet": "assets/characterSheet/characterSheet.png",
-            "dimensions": [311, 772],
+            "spritesheet": "assets/guard.png",
+            "dimensions": [309, 768],
             "scale": 0.1,
             "animations": []
         },
