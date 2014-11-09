@@ -686,7 +686,7 @@
             {
                 "name": "Red",
                 "color": [255, 0, 0],
-                "pos": [612, 150],
+                "pos": [572, 150],
                 "spritesheet": "assets/characterSheet/characterSheet.png",
                 "dimensions": [311, 772],
                 "scale": 0.1,
@@ -706,7 +706,7 @@
             {
                 "name": "Green",
                 "color": [0, 255, 0],
-                "pos": [192, 150],
+                "pos": [802, 150],
                 "spritesheet": "assets/characterSheet/characterSheet.png",
                 "dimensions": [311, 772],
                 "scale": 0.1,

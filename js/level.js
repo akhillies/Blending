@@ -17,7 +17,7 @@ level.prototype = {
     {
         console.log(curlvl);
         this.levels = levels;
-        this.curlvl = 7 //curlvl;
+        this.curlvl = 9 //curlvl;
     },
 
     preload: function()
