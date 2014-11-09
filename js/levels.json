@@ -114,10 +114,10 @@
         "guard":
         {
             "name": "Guard",
-            "color": [255, 255, 255],
-            "pos": [1000, 150],
-            "spritesheet": "assets/characterSheet/characterSheet.png",
-            "dimensions": [311, 772],
+            "color": [150, 0, 0],
+            "pos": [975, 150],
+            "spritesheet": "assets/guard.png",
+            "dimensions": [309, 768],
             "scale": 0.1,
             "animations": []
         },
@@ -157,7 +157,7 @@
                 "spritesheet": "assets/characterSheet/characterSheet.png",
                 "dimensions": [311, 772],
                 "scale": 0.1,
-            "additive": true,
+                "additive": true,
                 "animations": []
             },
             {
@@ -167,7 +167,7 @@
                 "spritesheet": "assets/characterSheet/characterSheet.png",
                 "dimensions": [311, 772],
                 "scale": 0.1,
-            "additive": true,
+                "additive": true,
                 "animations": []
             },
             {
@@ -177,7 +177,7 @@
                 "spritesheet": "assets/characterSheet/characterSheet.png",
                 "dimensions": [311, 772],
                 "scale": 0.1,
-            "additive": true,
+                "additive": true,
                 "animations": []
             }
 
@@ -189,16 +189,16 @@
         "guard":
         {
             "name": "Guard",
-            "color": [127, 0, 127],
-            "pos": [1000, 150],
-            "spritesheet": "assets/characterSheet/characterSheet.png",
-            "dimensions": [311, 772],
+            "color": [150, 0, 0],
+            "pos": [975, 150],
+            "spritesheet": "assets/guard.png",
+            "dimensions": [309, 768],
             "scale": 0.1,
             "animations": []
         },
         "threshold": 17,
         "audio": ["assets/audio/bgMusic.mp3", "assets/audio/bgMusic.ogg"]
-        },
+    },
 
 
 
@@ -232,7 +232,7 @@
                 "spritesheet": "assets/characterSheet/characterSheet.png",
                 "dimensions": [311, 772],
                 "scale": 0.1,
-            "additive": true,
+                "additive": true,
                 "animations": []
             },
             {
@@ -242,7 +242,7 @@
                 "spritesheet": "assets/characterSheet/characterSheet.png",
                 "dimensions": [311, 772],
                 "scale": 0.1,
-            "additive": true,
+                "additive": true,
                 "animations": []
             },
             {
@@ -252,7 +252,7 @@
                 "spritesheet": "assets/characterSheet/characterSheet.png",
                 "dimensions": [311, 772],
                 "scale": 0.1,
-            "additive": true,
+                "additive": true,
                 "animations": []
             }
 
@@ -264,10 +264,10 @@
         "guard":
         {
             "name": "Guard",
-            "color": [127, 127, 127],
-            "pos": [1000, 150],
-            "spritesheet": "assets/characterSheet/characterSheet.png",
-            "dimensions": [311, 772],
+            "color": [150, 0, 0],
+            "pos": [975, 150],
+            "spritesheet": "assets/guard.png",
+            "dimensions": [309, 768],
             "scale": 0.1,
             "animations": []
         },
@@ -307,7 +307,7 @@
                 "spritesheet": "assets/characterSheet/characterSheet.png",
                 "dimensions": [311, 772],
                 "scale": 0.1,
-            "additive": true,
+                "additive": true,
                 "animations": []
             },
             {
@@ -317,7 +317,7 @@
                 "spritesheet": "assets/characterSheet/characterSheet.png",
                 "dimensions": [311, 772],
                 "scale": 0.1,
-            "additive": true,
+                "additive": true,
                 "animations": []
             },
             {
@@ -327,7 +327,7 @@
                 "spritesheet": "assets/characterSheet/characterSheet.png",
                 "dimensions": [311, 772],
                 "scale": 0.1,
-            "additive": true,
+                "additive": true,
                 "animations": []
             }
 
@@ -339,19 +339,20 @@
         "guard":
         {
             "name": "Guard",
-            "color": [255, 127, 64],
-            "pos": [1000, 150],
-            "spritesheet": "assets/characterSheet/characterSheet.png",
-            "dimensions": [311, 772],
+            "color": [150, 0, 0],
+            "pos": [975, 150],
+            "spritesheet": "assets/guard.png",
+            "dimensions": [309, 768],
             "scale": 0.1,
             "animations": []
         },
         "threshold": 10,
         "audio": ["assets/audio/bgMusic.mp3", "assets/audio/bgMusic.ogg"]
-      },
+    },
 
-     {
+    {
         "numPeople": 3,
+        "numlevel": 6,
         "player":
         {
             "name": "Player",
@@ -379,7 +380,7 @@
                 "spritesheet": "assets/characterSheet/characterSheet.png",
                 "dimensions": [311, 772],
                 "scale": 0.1,
-            "additive": true,
+                "additive": true,
                 "animations": []
             },
             {
@@ -389,7 +390,7 @@
                 "spritesheet": "assets/characterSheet/characterSheet.png",
                 "dimensions": [311, 772],
                 "scale": 0.1,
-            "additive": true,
+                "additive": true,
                 "animations": []
             },
             {
@@ -399,7 +400,7 @@
                 "spritesheet": "assets/characterSheet/characterSheet.png",
                 "dimensions": [311, 772],
                 "scale": 0.1,
-            "additive": true,
+                "additive": true,
                 "animations": []
             }
 
@@ -411,21 +412,22 @@
         "guard":
         {
             "name": "Guard",
-            "color": [128, 64, 64],
-            "pos": [1000, 150],
-            "spritesheet": "assets/characterSheet/characterSheet.png",
-            "dimensions": [311, 772],
+            "color": [150, 0, 0],
+            "pos": [975, 150],
+            "spritesheet": "assets/guard.png",
+            "dimensions": [309, 768],
             "scale": 0.1,
             "animations": []
         },
         "threshold": 10,
         "audio": ["assets/audio/bgMusic.mp3", "assets/audio/bgMusic.ogg"]
-       },
+    },
 
 
 
-     {
+    {
         "numPeople": 3,
+        "numlevel": 7,
         "player":
         {
             "name": "Player",
@@ -448,12 +450,12 @@
         "people": [
             {
                 "name": "BlueGreenRed",
-                "color": [64, 128, 192],
+                "color": [64, 128, 210],
                 "pos": [512, 150],
                 "spritesheet": "assets/characterSheet/characterSheet.png",
                 "dimensions": [311, 772],
                 "scale": 0.1,
-            "additive": true,
+                "additive": true,
                 "animations": []
             },
             {
@@ -463,17 +465,17 @@
                 "spritesheet": "assets/characterSheet/characterSheet.png",
                 "dimensions": [311, 772],
                 "scale": 0.1,
-            "additive": true,
+                "additive": true,
                 "animations": []
             },
             {
-                "name": "DarkGreen",
-                "color": [0, 0, 30],
+                "name": "DarkBlue",
+                "color": [0, 0, 50],
                 "pos": [712, 150],
                 "spritesheet": "assets/characterSheet/characterSheet.png",
                 "dimensions": [311, 772],
                 "scale": 0.1,
-            "additive": true,
+                "additive": true,
                 "animations": []
             }
 
@@ -485,20 +487,21 @@
         "guard":
         {
             "name": "Guard",
-            "color": [51, 72, 150],
-            "pos": [1000, 150],
-            "spritesheet": "assets/characterSheet/characterSheet.png",
-            "dimensions": [311, 772],
+            "color": [150, 0, 0],
+            "pos": [975, 150],
+            "spritesheet": "assets/guard.png",
+            "dimensions": [309, 768],
             "scale": 0.1,
             "animations": []
         },
         "threshold": 10,
         "audio": ["assets/audio/bgMusic.mp3", "assets/audio/bgMusic.ogg"]
-       },
+    },
 
 
-        {
+    {
         "numPeople": 4,
+        "numlevel": 8,
         "player":
         {
             "name": "Player",
@@ -526,7 +529,7 @@
                 "spritesheet": "assets/characterSheet/characterSheet.png",
                 "dimensions": [311, 772],
                 "scale": 0.1,
-            "additive": true,
+                "additive": true,
                 "animations": []
             },
             {
@@ -536,7 +539,7 @@
                 "spritesheet": "assets/characterSheet/characterSheet.png",
                 "dimensions": [311, 772],
                 "scale": 0.1,
-            "additive": true,
+                "additive": true,
                 "animations": []
             },
             {
@@ -546,7 +549,7 @@
                 "spritesheet": "assets/characterSheet/characterSheet.png",
                 "dimensions": [311, 772],
                 "scale": 0.1,
-            "additive": true,
+                "additive": true,
                 "animations": []
             },
             {
@@ -556,7 +559,7 @@
                 "spritesheet": "assets/characterSheet/characterSheet.png",
                 "dimensions": [311, 772],
                 "scale": 0.1,
-            "additive": true,
+                "additive": true,
                 "animations": []
             }
 
@@ -568,8 +571,8 @@
         "guard":
         {
             "name": "Guard",
-            "color": [255, 127, 64],
-            "pos": [1000, 150],
+            "color": [150, 0, 0],
+            "pos": [975, 150],
             "spritesheet": "assets/guard.png",
             "dimensions": [309, 768],
             "scale": 0.1,
@@ -577,10 +580,10 @@
         },
         "threshold": 10,
         "audio": ["assets/audio/bgMusic.mp3", "assets/audio/bgMusic.ogg"]
-},
+    },
 
 
-{
+    {
         "numPeople": 3,
         "numlevel": 9,
         "player":
@@ -611,7 +614,7 @@
                 "spritesheet": "assets/characterSheet/characterSheet.png",
                 "dimensions": [311, 772],
                 "scale": 0.1,
-            "additive": true,
+                "additive": true,
                 "animations": []
             },
             {
@@ -621,7 +624,7 @@
                 "spritesheet": "assets/characterSheet/characterSheet.png",
                 "dimensions": [311, 772],
                 "scale": 0.1,
-            "additive": false,
+                "additive": false,
                 "animations": []
             },
             {
@@ -631,7 +634,7 @@
                 "spritesheet": "assets/characterSheet/characterSheet.png",
                 "dimensions": [311, 772],
                 "scale": 0.1,
-            "additive": true,
+                "additive": true,
                 "animations": []
             }
 
@@ -643,8 +646,8 @@
         "guard":
         {
             "name": "Guard",
-            "color": [255, 127, 0],
-            "pos": [1000, 150],
+            "color": [150, 0, 0],
+            "pos": [975, 150],
             "spritesheet": "assets/guard.png",
             "dimensions": [309, 768],
             "scale": 0.1,
@@ -652,5 +655,5 @@
         },
         "threshold": 10,
         "audio": ["assets/audio/bgMusic.mp3", "assets/audio/bgMusic.ogg"]
-}
+    }
 ]
