@@ -85,7 +85,7 @@ requirejs(['phaser', 'util'],
           youBlock.body.collideWorldBounds = true;
 
           for(var i = 0; i < player.animations.length; i++){
-            youBlock.animations.add(player.animations[i].name, player.animations[i].order, player.animations.framerate, player.animations[i].loop);
+            youBlock.animations.add(player.animations[i].name, player.animations[i].order,player.animations[i].framerate, player.animations[i].loop);
           }
       }
 

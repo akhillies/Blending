@@ -5,7 +5,7 @@
     "color": [0,0,0],
     "pos": [0,150],
     "spritesheet": "assets/characterSheet/characterSheet.png",
-    "dimensions": [311,722],
+    "dimensions": [311,772],
     "scale": 0.1,
     "animations": [{
       "name": "walk",
@@ -20,7 +20,7 @@
     "color": [255,0,0],
     "pos": [512,150],
     "spritesheet": "assets/characterSheet/characterSheet.png",
-    "dimensions": [311,722],
+    "dimensions": [311,772],
     "scale": 0.1,
     "animations": []
     }],
@@ -32,7 +32,7 @@
     "color": [150,0,0],
     "pos": [1000,150],
     "spritesheet": "assets/characterSheet/characterSheet.png",
-    "dimensions": [311,722],
+    "dimensions": [311,772],
     "scale": 0.1,
     "animations": []
   },
