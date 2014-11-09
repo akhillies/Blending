@@ -106,6 +106,59 @@
         },
         "threshold": 10,
         "audio": ["assets/audio/bgMusic.mp3", "assets/audio/bgMusic.ogg"]
-
+        "name": "walk",
+        "order": [4, 3, 2, 1, 0],
+        "framerate": 18,
+        "loop": true,
+        "stillFrame": 2
     }
+]
+},
+
+"people": [
+{
+    "name": "Red",
+    "color": [255, 0, 0],
+    "pos": [312, 150],
+    "spritesheet": "assets/characterSheet/characterSheet.png",
+    "dimensions": [311, 772],
+    "scale": 0.1,
+    "animations": []
+},
+{
+    "name": "Green",
+    "color": [0, 255, 0],
+    "pos": [512, 150],
+    "spritesheet": "assets/characterSheet/characterSheet.png",
+    "dimensions": [311, 772],
+    "scale": 0.1,
+    "animations": []
+},
+{
+    "name": "Blue",
+    "color": [0, 0, 255],
+    "pos": [712, 150],
+    "spritesheet": "assets/characterSheet/characterSheet.png",
+    "dimensions": [311, 772],
+    "scale": 0.1,
+    "animations": []
+}],
+
+"startColor": [0, 0, 0],
+"background": "assets/testbg.png",
+"startPos": [0, 150],
+"guard":
+{
+    "name": "Guard",
+    "color": [255, 255, 255],
+    "pos": [1000, 150],
+    "spritesheet": "assets/characterSheet/characterSheet.png",
+    "dimensions": [311, 772],
+    "scale": 0.1,
+    "animations": []
+},
+"threshold": 10,
+"audio": ["assets/audio/bgMusic.mp3", "assets/audio/bgMusic.ogg"] >>> >>> > a278535be036f8ab727aa48c467b651396cd6804
+
+}
 ]
