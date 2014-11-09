@@ -35,11 +35,6 @@ requirejs(['phaser', 'util'],
             var guard = lvl.guard;
             var player = lvl.player;
 
-
-
-            var colorConstant = .5;
-            var moveSpeed = 2;
-
             var youBlock;
             var arrowKeys;
             var thePeople;
@@ -68,7 +63,7 @@ requirejs(['phaser', 'util'],
                 var bg = game.add.sprite(0, 0, "bg");
                 arrowKeys = game.input.keyboard.createCursorKeys();
 
-                youRGB = game.add.text(0,
+                youRGB = game.add.text(25,
                     250,
                     "Your RGB Values\nRed: " + player.color[0] + "\nGreen: " + player.color[1] + "\nBlue: " + player.color[2],
                     {
@@ -138,13 +133,13 @@ requirejs(['phaser', 'util'],
 
                 if (arrowKeys.left.isDown)
                 {
-                    youBlock.x -= moveSpeed;
+                    youBlock.x -= player.moveSpeed;
                     youBlock.animations.play('walk');
                     youBlock.scale.x = -player.scale;
                 }
                 else if (arrowKeys.right.isDown)
                 {
-                    youBlock.x += moveSpeed;
+                    youBlock.x += player.moveSpeed;
                     youBlock.animations.play('walk');
                     youBlock.scale.x = player.scale;
                 }
@@ -166,21 +161,21 @@ requirejs(['phaser', 'util'],
                 var diffR = 0;
                 if (dude.tintTaken[0] <= dudeR)
                 {
-                    diffR += dudeR / 255 * colorConstant;
+                    diffR += dudeR / 255 * player.colorConstant;
                     dude.tintTaken[0] += diffR;
                     you.rgb[0] += diffR;
                 }
                 var diffG = 0;
                 if (dude.tintTaken[1] <= dudeG)
                 {
-                    diffG += dudeG / 255 * colorConstant;
+                    diffG += dudeG / 255 * player.colorConstant;
                     dude.tintTaken[1] += diffG;
                     you.rgb[1] += diffG;
                 }
                 var diffB = 0;
                 if (dude.tintTaken[2] <= dudeB)
                 {
-                    diffB += dudeB / 255 * colorConstant;
+                    diffB += dudeB / 255 * player.colorConstant;
                     dude.tintTaken[2] += diffB;
                     you.rgb[2] += diffB;
                 }
