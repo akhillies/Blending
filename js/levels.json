@@ -352,6 +352,7 @@
 
      {
         "numPeople": 3,
+        "numlevel": 6,
         "player":
         {
             "name": "Player",
@@ -426,6 +427,7 @@
 
      {
         "numPeople": 3,
+        "numlevel": 7,
         "player":
         {
             "name": "Player",
@@ -448,7 +450,7 @@
         "people": [
             {
                 "name": "BlueGreenRed",
-                "color": [64, 128, 192],
+                "color": [64, 128, 210],
                 "pos": [512, 150],
                 "spritesheet": "assets/characterSheet/characterSheet.png",
                 "dimensions": [311, 772],
@@ -467,8 +469,8 @@
                 "animations": []
             },
             {
-                "name": "DarkGreen",
-                "color": [0, 0, 30],
+                "name": "DarkBlue",
+                "color": [0, 0, 50],
                 "pos": [712, 150],
                 "spritesheet": "assets/characterSheet/characterSheet.png",
                 "dimensions": [311, 772],
@@ -499,6 +501,7 @@
 
         {
         "numPeople": 4,
+        "numlevel": 8,
         "player":
         {
             "name": "Player",
@@ -568,7 +571,7 @@
         "guard":
         {
             "name": "Guard",
-            "color": [255, 127, 64],
+            "color": [255, 64, 90],
             "pos": [1000, 150],
             "spritesheet": "assets/guard.png",
             "dimensions": [309, 768],
