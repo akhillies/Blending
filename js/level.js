@@ -186,21 +186,21 @@ level.prototype = {
                 diffR += Math.min(255 - you.rgb[0], dudeR / 255 * player.colorConstant);
                 dude.tintTaken[0] += diffR;
                 you.rgb[0] += diffR;
-                percentR = dude.tintTaken[0] / 255;
+                percentR = 1 - (dudeR - dude.tintTaken[0]) / 255;
             }
             if (dude.tintTaken[1] < dudeG)
             {
                 diffG += Math.min(255 - you.rgb[1], dudeG / 255 * player.colorConstant);
                 dude.tintTaken[1] += diffG;
                 you.rgb[1] += diffG;
-                percentG = dude.tintTaken[1] / 255;
+                percentG = 1 - (dudeG - dude.tintTaken[1]) / 255;
             }
             if (dude.tintTaken[2] < dudeB)
             {
                 diffB += Math.min(255 - you.rgb[2], dudeB / 255 * player.colorConstant);
                 dude.tintTaken[2] += diffB;
                 you.rgb[2] += diffB;
-                percentB = dude.tintTaken[2] / 255;
+                percentB = 1 - (dudeB - dude.tintTaken[2]) / 255;
             }
 
             dude.graphics.beginFill(0x000000);
@@ -222,21 +222,21 @@ level.prototype = {
             var percentG = 1;
             var percentB = 1;
 
-            if (dude.tintTaken[0] >= dudeR)
+            if (dude.tintTaken[0] > dudeR)
             {
                 diffR += Math.max(0 - you.rgb[0], dudeR / 255 * player.colorConstant);
                 dude.tintTaken[0] += diffR;
                 you.rgb[0] += diffR;
                 percentR = (255 + dude.tintTaken[0]) / 255;
             }
-            if (dude.tintTaken[1] >= dudeG)
+            if (dude.tintTaken[1] > dudeG)
             {
                 diffG += Math.max(0 - you.rgb[1], dudeG / 255 * player.colorConstant);
                 dude.tintTaken[1] += diffG;
                 you.rgb[1] += diffG;
                 percentG = (255 + dude.tintTaken[1]) / 255;
             }
-            if (dude.tintTaken[2] >= dudeB)
+            if (dude.tintTaken[2] > dudeB)
             {
                 diffB += Math.max(0 - you.rgb[2], dudeB / 255 * player.colorConstant);
                 dude.tintTaken[2] += diffB;
