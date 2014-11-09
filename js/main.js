@@ -57,7 +57,7 @@ requirejs(['phaser', 'util'],
 
             function create()
             {
-                bgmusic = game.add.audio('bgaudio');
+                bgmusic = game.add.audio('bgaudio', 1, true);
                 bgmusic.play();
 
                 var bg = game.add.sprite(0, 0, "bg");
