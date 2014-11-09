@@ -10,7 +10,7 @@ var thePeople;
 var goalBlock;
 var youRGB;
 var goalRGB;
-var bgmusic
+var bgmusic;
 
 level.prototype = {
     init: function(levels, curlvl)
