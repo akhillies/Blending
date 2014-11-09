@@ -89,7 +89,7 @@
                 "dimensions": [311, 772],
                 "scale": 0.1,
                 "animations": []
-            }
+            },
             {
                 "name": "Blue",
                 "color": [255, 0, 0],
@@ -117,11 +117,5 @@
         },
         "threshold": 10,
         "audio": ["assets/audio/bgMusic.mp3", "assets/audio/bgMusic.ogg"]
-        "name": "walk",
-        "order": [4, 3, 2, 1, 0],
-        "framerate": 18,
-        "loop": true,
-        "stillFrame": 2
-        }]
-},
+}
 ]
