@@ -760,9 +760,9 @@
         "people": [
             {
                 "name": "GB",
-                "color": [0, 63, 63],
+                "color": [255, 192, 192],
                 "pos": [312, 150],
-                "spritesheet": "assets/hatman.png.png",
+                "spritesheet": "assets/hatman.png",
                 "dimensions": [311, 772],
                 "scale": 0.1,
             "additive": false,
@@ -770,9 +770,9 @@
             },
             {
                 "name": "RB",
-                "color": [127, 0, 127],
+                "color": [127, 255, 127],
                 "pos": [512, 150],
-                "spritesheet": "assets/hatman.png.png",
+                "spritesheet": "assets/hatman.png",
                 "dimensions": [311, 772],
                 "scale": 0.1,
             "additive": false,
@@ -782,7 +782,7 @@
                 "name": "RG",
                 "color": [255, 255, 0],
                 "pos": [712, 150],
-                "spritesheet": "assets/hatman.png",
+                "spritesheet": "assets/characterSheet/characterSheet.png",
                 "dimensions": [311, 772],
                 "scale": 0.1,
             "additive": true,
@@ -847,7 +847,7 @@
             },
             {
                 "name": "RedGB",
-                "color": [256, 32, 32],
+                "color": [255, 32, 32],
                 "pos": [390, 150],
                 "spritesheet": "assets/characterSheet/characterSheet.png",
                 "dimensions": [311, 772],
@@ -857,7 +857,7 @@
             },
             {
                 "name": "BlueGreenRed",
-                "color": [96, 128, 255],
+                "color": [160, 128, 0],
                 "pos": [520, 150],
                 "spritesheet": "assets/hatman.png",
                 "dimensions": [311, 772],
@@ -877,9 +877,9 @@
             },
             {
                 "name": "RedBlue",
-                "color": [224, 0, 32],
+                "color": [32, 255, 224],
                 "pos": [760, 150],
-                "spritesheet": "assets/hatman.png.png",
+                "spritesheet": "assets/hatman.png",
                 "dimensions": [311, 772],
                 "scale": 0.1,
             "additive": false,
