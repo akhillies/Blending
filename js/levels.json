@@ -655,5 +655,80 @@
         },
         "threshold": 10,
         "audio": ["assets/audio/bgMusic.mp3", "assets/audio/bgMusic.ogg"]
-}
+    },
+
+
+{
+        "numPeople": 3,
+        "numlevel": 10,
+        "player":
+        {
+            "name": "Player",
+            "color": [255, 127, 0],
+            "pos": [0, 150],
+            "spritesheet": "assets/characterSheet/characterSheet.png",
+            "dimensions": [311, 772],
+            "scale": 0.1,
+
+            "colorConstant": 0.5,
+            "moveSpeed": 2,
+            "animations": [
+            {
+                "name": "walk",
+                "order": [4, 3, 2, 1, 0],
+                "framerate": 18,
+                "loop": true,
+                "stillFrame": 2
+            }]
+        },
+        "people": [
+            {
+                "name": "Red",
+                "color": [255, 0, 0],
+                "pos": [612, 150],
+                "spritesheet": "assets/characterSheet/characterSheet.png",
+                "dimensions": [311, 772],
+                "scale": 0.1,
+            "additive": true,
+                "animations": []
+            },
+            {
+                "name": "Blue",
+                "color": [0, 0, 255],
+                "pos": [362, 150],
+                "spritesheet": "assets/characterSheet/characterSheet.png",
+                "dimensions": [311, 772],
+                "scale": 0.1,
+            "additive": true,
+                "animations": []
+            },
+            {
+                "name": "Green",
+                "color": [0, 255, 0],
+                "pos": [192, 150],
+                "spritesheet": "assets/characterSheet/characterSheet.png",
+                "dimensions": [311, 772],
+                "scale": 0.1,
+            "additive": false,
+                "animations": []
+            }
+
+        ],
+
+        "startColor": [0, 0, 0],
+        "background": "assets/testbg.png",
+        "startPos": [0, 150],
+        "guard":
+        {
+            "name": "Guard",
+            "color": [25, 127, 118],
+            "pos": [1000, 150],
+            "spritesheet": "assets/guard.png",
+            "dimensions": [309, 768],
+            "scale": 0.1,
+            "animations": []
+        },
+        "threshold": 10,
+        "audio": ["assets/audio/bgMusic.mp3", "assets/audio/bgMusic.ogg"]
+    },
 ]
