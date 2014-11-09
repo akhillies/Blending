@@ -275,14 +275,6 @@ level.prototype = {
 
         if (youR >= goalR - lvl.threshold && youR <= goalR + lvl.threshold && youG >= goalG - lvl.threshold && youG <= goalG + lvl.threshold && youB >= goalB - lvl.threshold && youB <= goalB + lvl.threshold)
         {
-            thePeople.callAll('kill');
-            youBlock.kill();
-            goalBlock.kill();
-            restartButton.destroy();
-            resetButton.destroy();
-            youRGB.destroy();
-            goalRGB.destroy();
-            bgmusic.destroy();
             this.goToLevel(this.curlvl + 1);
         }
     },
