@@ -1,6 +1,7 @@
 [
     {
         "numPeople": 1,
+        "numlevel": 1,
         "player":
         {
             "name": "Player",
@@ -28,6 +29,7 @@
             "spritesheet": "assets/characterSheet/characterSheet.png",
             "dimensions": [311, 772],
             "scale": 0.1,
+            "additive": true,
             "animations": []
         }],
         "startColor": [0, 0, 0],
@@ -52,6 +54,7 @@
 
     {
         "numPeople": 3,
+        "numlevel": 2,
         "player":
         {
             "name": "Player",
@@ -79,6 +82,7 @@
                 "spritesheet": "assets/characterSheet/characterSheet.png",
                 "dimensions": [311, 772],
                 "scale": 0.1,
+                "additive": true,
                 "animations": []
             },
             {
@@ -88,6 +92,7 @@
                 "spritesheet": "assets/characterSheet/characterSheet.png",
                 "dimensions": [311, 772],
                 "scale": 0.1,
+                "additive": true,
                 "animations": []
             },
             {
@@ -97,6 +102,7 @@
                 "spritesheet": "assets/characterSheet/characterSheet.png",
                 "dimensions": [311, 772],
                 "scale": 0.1,
+                "additive": true,
                 "animations": []
             }
 
@@ -123,6 +129,7 @@
 
     {
         "numPeople": 3,
+        "numlevel": 3,
         "player":
         {
             "name": "Player",
@@ -150,6 +157,7 @@
                 "spritesheet": "assets/characterSheet/characterSheet.png",
                 "dimensions": [311, 772],
                 "scale": 0.1,
+            "additive": true,
                 "animations": []
             },
             {
@@ -159,6 +167,7 @@
                 "spritesheet": "assets/characterSheet/characterSheet.png",
                 "dimensions": [311, 772],
                 "scale": 0.1,
+            "additive": true,
                 "animations": []
             },
             {
@@ -168,6 +177,7 @@
                 "spritesheet": "assets/characterSheet/characterSheet.png",
                 "dimensions": [311, 772],
                 "scale": 0.1,
+            "additive": true,
                 "animations": []
             }
 
@@ -186,7 +196,7 @@
             "scale": 0.1,
             "animations": []
         },
-        "threshold": 10,
+        "threshold": 17,
         "audio": ["assets/audio/bgMusic.mp3", "assets/audio/bgMusic.ogg"]
         },
 
@@ -194,6 +204,7 @@
 
     {
         "numPeople": 3,
+        "numlevel": 4,
         "player":
         {
             "name": "Player",
@@ -221,24 +232,27 @@
                 "spritesheet": "assets/characterSheet/characterSheet.png",
                 "dimensions": [311, 772],
                 "scale": 0.1,
+            "additive": true,
                 "animations": []
             },
             {
                 "name": "Green",
-                "color": [255, 0, 0],
+                "color": [0, 255, 0],
                 "pos": [512, 150],
                 "spritesheet": "assets/characterSheet/characterSheet.png",
                 "dimensions": [311, 772],
                 "scale": 0.1,
+            "additive": true,
                 "animations": []
             },
             {
                 "name": "Blue",
-                "color": [255, 0, 0],
+                "color": [0, 0, 255],
                 "pos": [712, 150],
                 "spritesheet": "assets/characterSheet/characterSheet.png",
                 "dimensions": [311, 772],
                 "scale": 0.1,
+            "additive": true,
                 "animations": []
             }
 
@@ -265,6 +279,7 @@
 
     {
         "numPeople": 3,
+        "numlevel": 5,
         "player":
         {
             "name": "Player",
@@ -292,6 +307,7 @@
                 "spritesheet": "assets/characterSheet/characterSheet.png",
                 "dimensions": [311, 772],
                 "scale": 0.1,
+            "additive": true,
                 "animations": []
             },
             {
@@ -301,6 +317,7 @@
                 "spritesheet": "assets/characterSheet/characterSheet.png",
                 "dimensions": [311, 772],
                 "scale": 0.1,
+            "additive": true,
                 "animations": []
             },
             {
@@ -310,6 +327,7 @@
                 "spritesheet": "assets/characterSheet/characterSheet.png",
                 "dimensions": [311, 772],
                 "scale": 0.1,
+            "additive": true,
                 "animations": []
             }
 
@@ -361,6 +379,7 @@
                 "spritesheet": "assets/characterSheet/characterSheet.png",
                 "dimensions": [311, 772],
                 "scale": 0.1,
+            "additive": true,
                 "animations": []
             },
             {
@@ -370,6 +389,7 @@
                 "spritesheet": "assets/characterSheet/characterSheet.png",
                 "dimensions": [311, 772],
                 "scale": 0.1,
+            "additive": true,
                 "animations": []
             },
             {
@@ -379,6 +399,7 @@
                 "spritesheet": "assets/characterSheet/characterSheet.png",
                 "dimensions": [311, 772],
                 "scale": 0.1,
+            "additive": true,
                 "animations": []
             }
 
@@ -432,6 +453,7 @@
                 "spritesheet": "assets/characterSheet/characterSheet.png",
                 "dimensions": [311, 772],
                 "scale": 0.1,
+            "additive": true,
                 "animations": []
             },
             {
@@ -441,6 +463,7 @@
                 "spritesheet": "assets/characterSheet/characterSheet.png",
                 "dimensions": [311, 772],
                 "scale": 0.1,
+            "additive": true,
                 "animations": []
             },
             {
@@ -450,6 +473,7 @@
                 "spritesheet": "assets/characterSheet/characterSheet.png",
                 "dimensions": [311, 772],
                 "scale": 0.1,
+            "additive": true,
                 "animations": []
             }
 
@@ -496,39 +520,43 @@
         },
         "people": [
             {
-                "name": "RedBlueGreen",
-                "color": [255, 0, 0],
-                "pos": [512, 150],
+                "name": "RedGreenBlue",
+                "color": [128, 64, 72],
+                "pos": [612, 150],
                 "spritesheet": "assets/characterSheet/characterSheet.png",
                 "dimensions": [311, 772],
                 "scale": 0.1,
+            "additive": true,
                 "animations": []
             },
             {
-                "name": "Shaded_green",
-                "color": [127, 127, 0],
-                "pos": [312, 150],
+                "name": "RedGreenBlue",
+                "color": [200, 32, 10],
+                "pos": [362, 150],
                 "spritesheet": "assets/characterSheet/characterSheet.png",
                 "dimensions": [311, 772],
                 "scale": 0.1,
+            "additive": true,
                 "animations": []
             },
             {
-                "name": "White",
-                "color": [255, 255, 255],
-                "pos": [712, 150],
+                "name": "RedGB",
+                "color": [90, 50, 50],
+                "pos": [192, 150],
                 "spritesheet": "assets/characterSheet/characterSheet.png",
                 "dimensions": [311, 772],
                 "scale": 0.1,
+            "additive": true,
                 "animations": []
             },
             {
-                "name": "White",
-                "color": [255, 255, 255],
-                "pos": [712, 150],
+                "name": "RedBlue",
+                "color": [150, 0, 90],
+                "pos": [792, 150],
                 "spritesheet": "assets/characterSheet/characterSheet.png",
                 "dimensions": [311, 772],
                 "scale": 0.1,
+            "additive": true,
                 "animations": []
             }
 
@@ -541,6 +569,81 @@
         {
             "name": "Guard",
             "color": [255, 127, 64],
+            "pos": [1000, 150],
+            "spritesheet": "assets/guard.png",
+            "dimensions": [309, 768],
+            "scale": 0.1,
+            "animations": []
+        },
+        "threshold": 10,
+        "audio": ["assets/audio/bgMusic.mp3", "assets/audio/bgMusic.ogg"]
+},
+
+
+{
+        "numPeople": 3,
+        "numlevel": 9,
+        "player":
+        {
+            "name": "Player",
+            "color": [127, 127, 127],
+            "pos": [0, 150],
+            "spritesheet": "assets/characterSheet/characterSheet.png",
+            "dimensions": [311, 772],
+            "scale": 0.1,
+
+            "colorConstant": 0.5,
+            "moveSpeed": 2,
+            "animations": [
+            {
+                "name": "walk",
+                "order": [4, 3, 2, 1, 0],
+                "framerate": 18,
+                "loop": true,
+                "stillFrame": 2
+            }]
+        },
+        "people": [
+            {
+                "name": "Red",
+                "color": [255, 0, 0],
+                "pos": [612, 150],
+                "spritesheet": "assets/characterSheet/characterSheet.png",
+                "dimensions": [311, 772],
+                "scale": 0.1,
+            "additive": true,
+                "animations": []
+            },
+            {
+                "name": "Black",
+                "color": [0, 0, 0],
+                "pos": [362, 150],
+                "spritesheet": "assets/characterSheet/characterSheet.png",
+                "dimensions": [311, 772],
+                "scale": 0.1,
+            "additive": false,
+                "animations": []
+            },
+            {
+                "name": "Green",
+                "color": [0, 255, 0],
+                "pos": [192, 150],
+                "spritesheet": "assets/characterSheet/characterSheet.png",
+                "dimensions": [311, 772],
+                "scale": 0.1,
+            "additive": true,
+                "animations": []
+            }
+
+        ],
+
+        "startColor": [0, 0, 0],
+        "background": "assets/testbg.png",
+        "startPos": [0, 150],
+        "guard":
+        {
+            "name": "Guard",
+            "color": [255, 127, 0],
             "pos": [1000, 150],
             "spritesheet": "assets/guard.png",
             "dimensions": [309, 768],
