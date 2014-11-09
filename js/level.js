@@ -21,8 +21,10 @@ level.prototype = {
     {
         // console.log(curlvl);
         this.levels = levels;
+
         this.curlvl = curlvl;
         arrowKeys = this.game.input.keyboard.createCursorKeys();
+
     },
 
     preload: function()
