@@ -32,7 +32,7 @@
         "additive": true,
         "animations": []
     }],
-    "background": "assets/testbg.png",
+    "background": "assets/bg1.png",
     "guard":
     {
         "name": "Guard",

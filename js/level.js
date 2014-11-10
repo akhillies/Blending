@@ -23,7 +23,7 @@ level.prototype = {
         // console.log(curlvl);
         this.levels = levels;
 
-        this.curlvl = 10; //curlvl;
+        this.curlvl = curlvl;
         arrowKeys = this.game.input.keyboard.createCursorKeys();
 
     },
@@ -54,6 +54,10 @@ level.prototype = {
         bgmusic.play();
 
         var bg = this.game.add.sprite(0, 0, "bg");
+        console.log(bg)
+        this.game.stage.backgroundColor = '#ffffff';
+        bg.scale.x = 1
+        bg.scale.y = .38
 
         restartButton = this.game.add.button(0, 0, 'options', this.restartLevel, this);
         restartButton.scale.x = .1
@@ -62,17 +66,20 @@ level.prototype = {
         lvlUpButton = this.game.add.button(500, 250, '', this.lvlUp, this);
 
         threshold = this.game.add.text(500, 60, "Threshold: " + lvl.threshold);
+        if (this.curlvl ==0){
+          threshold.fill="#FFFFFF";
+        }
         threshold.align = "center";
         threshold.font = "Arial";
 
-        youRGB = this.game.add.text(25, 275,
+        youRGB = this.game.add.text(25, 300,
             "Your RGB Values\nRed: " + player.color[0] + "\nGreen: " + player.color[1] + "\nBlue: " + player.color[2]);
         youRGB.fill = "#" + Phaser.Color.getColor(player.color[0], player.color[1], player.color[2]).toString(16);
         youRGB.align = "center";
         youRGB.setShadow(0, 0, 'rgba(50,50,50,1)', 5);
         youRGB.font = "Arial";
 
-        goalRGB = this.game.add.text(700, 275,
+        goalRGB = this.game.add.text(700, 300,
             "Guard's RGB Values\nRed: " + guard.color[0] + "\nGreen: " + guard.color[1] + "\nBlue: " + guard.color[2]);
         goalRGB.fill = "#" + Phaser.Color.getColor(guard.color[0], guard.color[1], guard.color[2]).toString(16),
         goalRGB.align = "center";
