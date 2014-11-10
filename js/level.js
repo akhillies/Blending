@@ -23,7 +23,7 @@ level.prototype = {
         // console.log(curlvl);
         this.levels = levels;
 
-        this.curlvl = 10; //curlvl;
+        this.curlvl = curlvl;
         arrowKeys = this.game.input.keyboard.createCursorKeys();
 
     },
