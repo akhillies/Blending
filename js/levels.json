@@ -1,27 +1,282 @@
 [
+{
+    "numPeople": 1,
+    "numlevel": 1,
+    "player":
     {
-        "numPeople": 1,
-        "numlevel": 1,
-        "player":
+        "name": "Player",
+        "color": [0, 0, 0],
+        "pos": [0, 150],
+        "spritesheet": "assets/characterSheet/characterSheet.png",
+        "dimensions": [311, 772],
+        "scale": 0.1,
+        "colorConstant": 0.5,
+        "moveSpeed": 2,
+        "animations": [
         {
-            "name": "Player",
-            "color": [0, 0, 0],
-            "pos": [0, 150],
+            "name": "walk",
+            "order": [4, 3, 2, 1, 0],
+            "framerate": 18,
+            "loop": true,
+            "stillFrame": 2
+        }]
+    },
+    "people": [
+    {
+        "name": "Red",
+        "color": [255, 0, 0],
+        "pos": [512, 150],
+        "spritesheet": "assets/characterSheet/characterSheet.png",
+        "dimensions": [311, 772],
+        "scale": 0.1,
+        "additive": true,
+        "animations": []
+    }],
+    "background": "assets/testbg.png",
+    "guard":
+    {
+        "name": "Guard",
+        "color": [150, 0, 0],
+        "pos": [975, 150],
+        "spritesheet": "assets/guard.png",
+        "dimensions": [309, 768],
+        "scale": 0.1,
+        "animations": []
+    },
+    "threshold": 10,
+    "audio": "assets/audio/bgMusic.mp3"
+
+},
+{
+    "numPeople": 3,
+    "numlevel": 2,
+    "player":
+    {
+        "name": "Player",
+        "color": [0, 0, 0],
+        "pos": [0, 150],
+        "spritesheet": "assets/characterSheet/characterSheet.png",
+        "dimensions": [311, 772],
+        "scale": 0.1,
+        "colorConstant": 0.5,
+        "moveSpeed": 2,
+        "animations": [
+        {
+            "name": "walk",
+            "order": [4, 3, 2, 1, 0],
+            "framerate": 18,
+            "loop": true,
+            "stillFrame": 2
+        }]
+    },
+    "people": [
+        {
+            "name": "Red",
+            "color": [255, 0, 0],
+            "pos": [312, 150],
             "spritesheet": "assets/characterSheet/characterSheet.png",
             "dimensions": [311, 772],
             "scale": 0.1,
-            "colorConstant": 0.5,
-            "moveSpeed": 2,
-            "animations": [
-            {
-                "name": "walk",
-                "order": [4, 3, 2, 1, 0],
-                "framerate": 18,
-                "loop": true,
-                "stillFrame": 2
-            }]
+            "additive": true,
+            "animations": []
         },
-        "people": [
+        {
+            "name": "Green",
+            "color": [0, 255, 0],
+            "pos": [512, 150],
+            "spritesheet": "assets/characterSheet/characterSheet.png",
+            "dimensions": [311, 772],
+            "scale": 0.1,
+            "additive": true,
+            "animations": []
+        },
+        {
+            "name": "Blue",
+            "color": [0, 0, 255],
+            "pos": [712, 150],
+            "spritesheet": "assets/characterSheet/characterSheet.png",
+            "dimensions": [311, 772],
+            "scale": 0.1,
+            "additive": true,
+            "animations": []
+        }
+
+    ],
+    "background": "assets/testbg.png",
+    "guard":
+    {
+        "name": "Guard",
+        "color": [255, 255, 255],
+        "pos": [975, 150],
+        "spritesheet": "assets/guard.png",
+        "dimensions": [309, 768],
+        "scale": 0.1,
+        "animations": []
+    },
+    "threshold": 10,
+    "audio": ["assets/audio/bgMusic.mp3", "assets/audio/bgMusic.ogg"]
+},
+{
+    "numPeople": 3,
+    "numlevel": 3,
+    "player":
+    {
+        "name": "Player",
+        "color": [0, 0, 0],
+        "pos": [0, 150],
+        "spritesheet": "assets/characterSheet/characterSheet.png",
+        "dimensions": [311, 772],
+        "scale": 0.1,
+        "colorConstant": 0.5,
+        "moveSpeed": 2,
+        "animations": [
+        {
+            "name": "walk",
+            "order": [4, 3, 2, 1, 0],
+            "framerate": 18,
+            "loop": true,
+            "stillFrame": 2
+        }]
+    },
+    "people": [
+        {
+            "name": "Red",
+            "color": [255, 0, 0],
+            "pos": [312, 150],
+            "spritesheet": "assets/characterSheet/characterSheet.png",
+            "dimensions": [311, 772],
+            "scale": 0.1,
+            "additive": true,
+            "animations": []
+        },
+        {
+            "name": "Green",
+            "color": [0, 255, 0],
+            "pos": [512, 150],
+            "spritesheet": "assets/characterSheet/characterSheet.png",
+            "dimensions": [311, 772],
+            "scale": 0.1,
+            "additive": true,
+            "animations": []
+        },
+        {
+            "name": "Blue",
+            "color": [0, 0, 255],
+            "pos": [712, 150],
+            "spritesheet": "assets/characterSheet/characterSheet.png",
+            "dimensions": [311, 772],
+            "scale": 0.1,
+            "additive": true,
+            "animations": []
+        }
+
+    ],
+    "background": "assets/testbg.png",
+    "guard":
+    {
+        "name": "Guard",
+        "color": [127, 0, 127],
+        "pos": [975, 150],
+        "spritesheet": "assets/guard.png",
+        "dimensions": [309, 768],
+        "scale": 0.1,
+        "animations": []
+    },
+    "threshold": 17,
+    "audio": ["assets/audio/bgMusic.mp3", "assets/audio/bgMusic.ogg"]
+},
+{
+    "numPeople": 3,
+    "numlevel": 4,
+    "player":
+    {
+        "name": "Player",
+        "color": [0, 0, 0],
+        "pos": [0, 150],
+        "spritesheet": "assets/characterSheet/characterSheet.png",
+        "dimensions": [311, 772],
+        "scale": 0.1,
+        "colorConstant": 0.5,
+        "moveSpeed": 2,
+        "animations": [
+        {
+            "name": "walk",
+            "order": [4, 3, 2, 1, 0],
+            "framerate": 18,
+            "loop": true,
+            "stillFrame": 2
+        }]
+    },
+    "people": [
+        {
+            "name": "Red",
+            "color": [255, 0, 0],
+            "pos": [312, 150],
+            "spritesheet": "assets/characterSheet/characterSheet.png",
+            "dimensions": [311, 772],
+            "scale": 0.1,
+            "additive": true,
+            "animations": []
+        },
+        {
+            "name": "Green",
+            "color": [0, 255, 0],
+            "pos": [512, 150],
+            "spritesheet": "assets/characterSheet/characterSheet.png",
+            "dimensions": [311, 772],
+            "scale": 0.1,
+            "additive": true,
+            "animations": []
+        },
+        {
+            "name": "Blue",
+            "color": [0, 0, 255],
+            "pos": [712, 150],
+            "spritesheet": "assets/characterSheet/characterSheet.png",
+            "dimensions": [311, 772],
+            "scale": 0.1,
+            "additive": true,
+            "animations": []
+        }
+
+    ],
+    "background": "assets/testbg.png",
+    "guard":
+    {
+        "name": "Guard",
+        "color": [127, 127, 127],
+        "pos": [975, 150],
+        "spritesheet": "assets/guard.png",
+        "dimensions": [309, 768],
+        "scale": 0.1,
+        "animations": []
+    },
+    "threshold": 10,
+    "audio": ["assets/audio/bgMusic.mp3", "assets/audio/bgMusic.ogg"]
+},
+{
+    "numPeople": 3,
+    "numlevel": 5,
+    "player":
+    {
+        "name": "Player",
+        "color": [0, 0, 0],
+        "pos": [0, 150],
+        "spritesheet": "assets/characterSheet/characterSheet.png",
+        "dimensions": [311, 772],
+        "scale": 0.1,
+        "colorConstant": 0.5,
+        "moveSpeed": 2,
+        "animations": [
+        {
+            "name": "walk",
+            "order": [4, 3, 2, 1, 0],
+            "framerate": 18,
+            "loop": true,
+            "stillFrame": 2
+        }]
+    },
+    "people": [
         {
             "name": "Red",
             "color": [255, 0, 0],
@@ -31,879 +286,553 @@
             "scale": 0.1,
             "additive": true,
             "animations": []
-        }],
-        "startColor": [0, 0, 0],
-        "background": "assets/testbg.png",
-        "startPos": [0, 150],
-        "guard":
-        {
-            "name": "Guard",
-            "color": [150, 0, 0],
-            "pos": [975, 150],
-            "spritesheet": "assets/guard.png",
-            "dimensions": [309, 768],
-            "scale": 0.1,
-            "animations": []
         },
-        "threshold": 10,
-        "audio": "assets/audio/bgMusic.mp3"
-
-    },
-
-
-
-    {
-        "numPeople": 3,
-        "numlevel": 2,
-        "player":
         {
-            "name": "Player",
-            "color": [0, 0, 0],
-            "pos": [0, 150],
+            "name": "Shaded_green",
+            "color": [127, 127, 0],
+            "pos": [312, 150],
             "spritesheet": "assets/characterSheet/characterSheet.png",
             "dimensions": [311, 772],
             "scale": 0.1,
-            "colorConstant": 0.5,
-            "moveSpeed": 2,
-            "animations": [
-            {
-                "name": "walk",
-                "order": [4, 3, 2, 1, 0],
-                "framerate": 18,
-                "loop": true,
-                "stillFrame": 2
-            }]
+            "additive": true,
+            "animations": []
         },
-        "people": [
-            {
-                "name": "Red",
-                "color": [255, 0, 0],
-                "pos": [312, 150],
-                "spritesheet": "assets/characterSheet/characterSheet.png",
-                "dimensions": [311, 772],
-                "scale": 0.1,
-                "additive": true,
-                "animations": []
-            },
-            {
-                "name": "Green",
-                "color": [0, 255, 0],
-                "pos": [512, 150],
-                "spritesheet": "assets/characterSheet/characterSheet.png",
-                "dimensions": [311, 772],
-                "scale": 0.1,
-                "additive": true,
-                "animations": []
-            },
-            {
-                "name": "Blue",
-                "color": [0, 0, 255],
-                "pos": [712, 150],
-                "spritesheet": "assets/characterSheet/characterSheet.png",
-                "dimensions": [311, 772],
-                "scale": 0.1,
-                "additive": true,
-                "animations": []
-            }
-
-        ],
-
-        "startColor": [0, 0, 0],
-        "background": "assets/testbg.png",
-        "startPos": [0, 150],
-        "guard":
         {
-            "name": "Guard",
+            "name": "White",
             "color": [255, 255, 255],
-            "pos": [975, 150],
-            "spritesheet": "assets/guard.png",
-            "dimensions": [309, 768],
-            "scale": 0.1,
-            "animations": []
-        },
-        "threshold": 10,
-        "audio": ["assets/audio/bgMusic.mp3", "assets/audio/bgMusic.ogg"]
-    },
-
-
-
-    {
-        "numPeople": 3,
-        "numlevel": 3,
-        "player":
-        {
-            "name": "Player",
-            "color": [0, 0, 0],
-            "pos": [0, 150],
+            "pos": [712, 150],
             "spritesheet": "assets/characterSheet/characterSheet.png",
             "dimensions": [311, 772],
             "scale": 0.1,
-            "colorConstant": 0.5,
-            "moveSpeed": 2,
-            "animations": [
-            {
-                "name": "walk",
-                "order": [4, 3, 2, 1, 0],
-                "framerate": 18,
-                "loop": true,
-                "stillFrame": 2
-            }]
-        },
-        "people": [
-            {
-                "name": "Red",
-                "color": [255, 0, 0],
-                "pos": [312, 150],
-                "spritesheet": "assets/characterSheet/characterSheet.png",
-                "dimensions": [311, 772],
-                "scale": 0.1,
-                "additive": true,
-                "animations": []
-            },
-            {
-                "name": "Green",
-                "color": [0, 255, 0],
-                "pos": [512, 150],
-                "spritesheet": "assets/characterSheet/characterSheet.png",
-                "dimensions": [311, 772],
-                "scale": 0.1,
-                "additive": true,
-                "animations": []
-            },
-            {
-                "name": "Blue",
-                "color": [0, 0, 255],
-                "pos": [712, 150],
-                "spritesheet": "assets/characterSheet/characterSheet.png",
-                "dimensions": [311, 772],
-                "scale": 0.1,
-                "additive": true,
-                "animations": []
-            }
+            "additive": true,
+            "animations": []
+        }
 
-        ],
-
-        "startColor": [0, 0, 0],
-        "background": "assets/testbg.png",
-        "startPos": [0, 150],
-        "guard":
+    ],
+    "background": "assets/testbg.png",
+    "guard":
+    {
+        "name": "Guard",
+        "color": [255, 127, 64],
+        "pos": [975, 150],
+        "spritesheet": "assets/guard.png",
+        "dimensions": [309, 768],
+        "scale": 0.1,
+        "animations": []
+    },
+    "threshold": 10,
+    "audio": ["assets/audio/bgMusic.mp3", "assets/audio/bgMusic.ogg"]
+},
+{
+    "numPeople": 3,
+    "numlevel": 6,
+    "player":
+    {
+        "name": "Player",
+        "color": [0, 0, 0],
+        "pos": [0, 150],
+        "spritesheet": "assets/characterSheet/characterSheet.png",
+        "dimensions": [311, 772],
+        "scale": 0.1,
+        "colorConstant": 0.5,
+        "moveSpeed": 2,
+        "animations": [
         {
-            "name": "Guard",
+            "name": "walk",
+            "order": [4, 3, 2, 1, 0],
+            "framerate": 18,
+            "loop": true,
+            "stillFrame": 2
+        }]
+    },
+    "people": [
+        {
+            "name": "RedGreen",
+            "color": [128, 128, 0],
+            "pos": [512, 150],
+            "spritesheet": "assets/characterSheet/characterSheet.png",
+            "dimensions": [311, 772],
+            "scale": 0.1,
+            "additive": true,
+            "animations": []
+        },
+        {
+            "name": "RedBlue",
             "color": [127, 0, 127],
-            "pos": [975, 150],
-            "spritesheet": "assets/guard.png",
-            "dimensions": [309, 768],
-            "scale": 0.1,
-            "animations": []
-        },
-        "threshold": 17,
-        "audio": ["assets/audio/bgMusic.mp3", "assets/audio/bgMusic.ogg"]
-    },
-
-
-
-    {
-        "numPeople": 3,
-        "numlevel": 4,
-        "player":
-        {
-            "name": "Player",
-            "color": [0, 0, 0],
-            "pos": [0, 150],
+            "pos": [312, 150],
             "spritesheet": "assets/characterSheet/characterSheet.png",
             "dimensions": [311, 772],
             "scale": 0.1,
-            "colorConstant": 0.5,
-            "moveSpeed": 2,
-            "animations": [
-            {
-                "name": "walk",
-                "order": [4, 3, 2, 1, 0],
-                "framerate": 18,
-                "loop": true,
-                "stillFrame": 2
-            }]
-        },
-        "people": [
-            {
-                "name": "Red",
-                "color": [255, 0, 0],
-                "pos": [312, 150],
-                "spritesheet": "assets/characterSheet/characterSheet.png",
-                "dimensions": [311, 772],
-                "scale": 0.1,
-                "additive": true,
-                "animations": []
-            },
-            {
-                "name": "Green",
-                "color": [0, 255, 0],
-                "pos": [512, 150],
-                "spritesheet": "assets/characterSheet/characterSheet.png",
-                "dimensions": [311, 772],
-                "scale": 0.1,
-                "additive": true,
-                "animations": []
-            },
-            {
-                "name": "Blue",
-                "color": [0, 0, 255],
-                "pos": [712, 150],
-                "spritesheet": "assets/characterSheet/characterSheet.png",
-                "dimensions": [311, 772],
-                "scale": 0.1,
-                "additive": true,
-                "animations": []
-            }
-
-        ],
-
-        "startColor": [0, 0, 0],
-        "background": "assets/testbg.png",
-        "startPos": [0, 150],
-        "guard":
-        {
-            "name": "Guard",
-            "color": [127, 127, 127],
-            "pos": [975, 150],
-            "spritesheet": "assets/guard.png",
-            "dimensions": [309, 768],
-            "scale": 0.1,
-            "animations": []
-        },
-        "threshold": 10,
-        "audio": ["assets/audio/bgMusic.mp3", "assets/audio/bgMusic.ogg"]
-    },
-
-
-
-    {
-        "numPeople": 3,
-        "numlevel": 5,
-        "player":
-        {
-            "name": "Player",
-            "color": [0, 0, 0],
-            "pos": [0, 150],
-            "spritesheet": "assets/characterSheet/characterSheet.png",
-            "dimensions": [311, 772],
-            "scale": 0.1,
-            "colorConstant": 0.5,
-            "moveSpeed": 2,
-            "animations": [
-            {
-                "name": "walk",
-                "order": [4, 3, 2, 1, 0],
-                "framerate": 18,
-                "loop": true,
-                "stillFrame": 2
-            }]
-        },
-        "people": [
-            {
-                "name": "Red",
-                "color": [255, 0, 0],
-                "pos": [512, 150],
-                "spritesheet": "assets/characterSheet/characterSheet.png",
-                "dimensions": [311, 772],
-                "scale": 0.1,
-                "additive": true,
-                "animations": []
-            },
-            {
-                "name": "Shaded_green",
-                "color": [127, 127, 0],
-                "pos": [312, 150],
-                "spritesheet": "assets/characterSheet/characterSheet.png",
-                "dimensions": [311, 772],
-                "scale": 0.1,
-                "additive": true,
-                "animations": []
-            },
-            {
-                "name": "White",
-                "color": [255, 255, 255],
-                "pos": [712, 150],
-                "spritesheet": "assets/characterSheet/characterSheet.png",
-                "dimensions": [311, 772],
-                "scale": 0.1,
-                "additive": true,
-                "animations": []
-            }
-
-        ],
-
-        "startColor": [0, 0, 0],
-        "background": "assets/testbg.png",
-        "startPos": [0, 150],
-        "guard":
-        {
-            "name": "Guard",
-            "color": [255, 127, 64],
-            "pos": [975, 150],
-            "spritesheet": "assets/guard.png",
-            "dimensions": [309, 768],
-            "scale": 0.1,
-            "animations": []
-        },
-        "threshold": 10,
-        "audio": ["assets/audio/bgMusic.mp3", "assets/audio/bgMusic.ogg"]
-    },
-
-    {
-        "numPeople": 3,
-        "numlevel": 6,
-        "player":
-        {
-            "name": "Player",
-            "color": [0, 0, 0],
-            "pos": [0, 150],
-            "spritesheet": "assets/characterSheet/characterSheet.png",
-            "dimensions": [311, 772],
-            "scale": 0.1,
-            "colorConstant": 0.5,
-            "moveSpeed": 2,
-            "animations": [
-            {
-                "name": "walk",
-                "order": [4, 3, 2, 1, 0],
-                "framerate": 18,
-                "loop": true,
-                "stillFrame": 2
-            }]
-        },
-        "people": [
-            {
-                "name": "RedGreen",
-                "color": [128, 128, 0],
-                "pos": [512, 150],
-                "spritesheet": "assets/characterSheet/characterSheet.png",
-                "dimensions": [311, 772],
-                "scale": 0.1,
-                "additive": true,
-                "animations": []
-            },
-            {
-                "name": "RedBlue",
-                "color": [127, 0, 127],
-                "pos": [312, 150],
-                "spritesheet": "assets/characterSheet/characterSheet.png",
-                "dimensions": [311, 772],
-                "scale": 0.1,
-                "additive": true,
-                "animations": []
-            },
-            {
-                "name": "GreenBlue",
-                "color": [0, 128, 128],
-                "pos": [712, 150],
-                "spritesheet": "assets/characterSheet/characterSheet.png",
-                "dimensions": [311, 772],
-                "scale": 0.1,
-                "additive": true,
-                "animations": []
-            }
-
-        ],
-
-        "startColor": [0, 0, 0],
-        "background": "assets/testbg.png",
-        "startPos": [0, 150],
-        "guard":
-        {
-            "name": "Guard",
-            "color": [128, 64, 64],
-            "pos": [975, 150],
-            "spritesheet": "assets/guard.png",
-            "dimensions": [309, 768],
-            "scale": 0.1,
-            "animations": []
-        },
-        "threshold": 10,
-        "audio": ["assets/audio/bgMusic.mp3", "assets/audio/bgMusic.ogg"]
-    },
-
-
-
-    {
-        "numPeople": 3,
-        "numlevel": 7,
-        "player":
-        {
-            "name": "Player",
-            "color": [0, 0, 0],
-            "pos": [0, 150],
-            "spritesheet": "assets/characterSheet/characterSheet.png",
-            "dimensions": [311, 772],
-            "scale": 0.1,
-            "colorConstant": 0.5,
-            "moveSpeed": 2,
-            "animations": [
-            {
-                "name": "walk",
-                "order": [4, 3, 2, 1, 0],
-                "framerate": 18,
-                "loop": true,
-                "stillFrame": 2
-            }]
-        },
-        "people": [
-            {
-                "name": "BlueGreenRed",
-                "color": [64, 128, 210],
-                "pos": [512, 150],
-                "spritesheet": "assets/characterSheet/characterSheet.png",
-                "dimensions": [311, 772],
-                "scale": 0.1,
-                "additive": true,
-                "animations": []
-            },
-            {
-                "name": "RedGreen",
-                "color": [128, 128, 0],
-                "pos": [312, 150],
-                "spritesheet": "assets/characterSheet/characterSheet.png",
-                "dimensions": [311, 772],
-                "scale": 0.1,
-                "additive": true,
-                "animations": []
-            },
-            {
-                "name": "DarkBlue",
-                "color": [0, 0, 50],
-                "pos": [712, 150],
-                "spritesheet": "assets/characterSheet/characterSheet.png",
-                "dimensions": [311, 772],
-                "scale": 0.1,
-                "additive": true,
-                "animations": []
-            }
-
-        ],
-
-        "startColor": [0, 0, 0],
-        "background": "assets/testbg.png",
-        "startPos": [0, 150],
-        "guard":
-        {
-            "name": "Guard",
-            "color": [51, 72, 150],
-            "pos": [975, 150],
-            "spritesheet": "assets/guard.png",
-            "dimensions": [309, 768],
-            "scale": 0.1,
-            "animations": []
-        },
-        "threshold": 10,
-        "audio": ["assets/audio/bgMusic.mp3", "assets/audio/bgMusic.ogg"]
-    },
-
-
-    {
-        "numPeople": 4,
-        "numlevel": 8,
-        "player":
-        {
-            "name": "Player",
-            "color": [0, 0, 0],
-            "pos": [0, 150],
-            "spritesheet": "assets/characterSheet/characterSheet.png",
-            "dimensions": [311, 772],
-            "scale": 0.1,
-            "colorConstant": 0.5,
-            "moveSpeed": 2,
-            "animations": [
-            {
-                "name": "walk",
-                "order": [4, 3, 2, 1, 0],
-                "framerate": 18,
-                "loop": true,
-                "stillFrame": 2
-            }]
-        },
-        "people": [
-            {
-                "name": "RedGreenBlue",
-                "color": [128, 64, 72],
-                "pos": [612, 150],
-                "spritesheet": "assets/characterSheet/characterSheet.png",
-                "dimensions": [311, 772],
-                "scale": 0.1,
-                "additive": true,
-                "animations": []
-            },
-            {
-                "name": "RedGreenBlue",
-                "color": [200, 32, 10],
-                "pos": [362, 150],
-                "spritesheet": "assets/characterSheet/characterSheet.png",
-                "dimensions": [311, 772],
-                "scale": 0.1,
-                "additive": true,
-                "animations": []
-            },
-            {
-                "name": "RedGB",
-                "color": [90, 50, 50],
-                "pos": [192, 150],
-                "spritesheet": "assets/characterSheet/characterSheet.png",
-                "dimensions": [311, 772],
-                "scale": 0.1,
-                "additive": true,
-                "animations": []
-            },
-            {
-                "name": "RedBlue",
-                "color": [150, 0, 90],
-                "pos": [792, 150],
-                "spritesheet": "assets/characterSheet/characterSheet.png",
-                "dimensions": [311, 772],
-                "scale": 0.1,
-                "additive": true,
-                "animations": []
-            }
-
-        ],
-
-        "startColor": [0, 0, 0],
-        "background": "assets/testbg.png",
-        "startPos": [0, 150],
-        "guard":
-        {
-            "name": "Guard",
-            "color": [255, 64, 90],
-            "pos": [975, 150],
-            "spritesheet": "assets/guard.png",
-            "dimensions": [309, 768],
-            "scale": 0.1,
-            "animations": []
-        },
-        "threshold": 10,
-        "audio": ["assets/audio/bgMusic.mp3", "assets/audio/bgMusic.ogg"]
-    },
-
-
-    {
-        "numPeople": 3,
-        "numlevel": 9,
-        "player":
-        {
-            "name": "Player",
-            "color": [127, 127, 127],
-            "pos": [0, 150],
-            "spritesheet": "assets/characterSheet/characterSheet.png",
-            "dimensions": [311, 772],
-            "scale": 0.1,
-
-            "colorConstant": 0.5,
-            "moveSpeed": 2,
-            "animations": [
-            {
-                "name": "walk",
-                "order": [4, 3, 2, 1, 0],
-                "framerate": 18,
-                "loop": true,
-                "stillFrame": 2
-            }]
-        },
-        "people": [
-            {
-                "name": "Red",
-                "color": [255, 0, 0],
-                "pos": [612, 150],
-                "spritesheet": "assets/characterSheet/characterSheet.png",
-                "dimensions": [311, 772],
-                "scale": 0.1,
-                "additive": true,
-                "animations": []
-            },
-            {
-                "name": "Black",
-                "color": [0, 0, 0],
-                "pos": [362, 150],
-                "spritesheet": "assets/hatman.png",
-                "dimensions": [311, 772],
-                "scale": 0.1,
-                "additive": false,
-                "animations": []
-            },
-            {
-                "name": "Green",
-                "color": [0, 255, 0],
-                "pos": [192, 150],
-                "spritesheet": "assets/characterSheet/characterSheet.png",
-                "dimensions": [311, 772],
-                "scale": 0.1,
-                "additive": true,
-                "animations": []
-            }
-
-        ],
-
-        "startColor": [0, 0, 0],
-        "background": "assets/testbg.png",
-        "startPos": [0, 150],
-        "guard":
-        {
-            "name": "Guard",
-            "color": [255, 127, 0],
-            "pos": [975, 150],
-            "spritesheet": "assets/guard.png",
-            "dimensions": [309, 768],
-            "scale": 0.1,
-            "animations": []
-        },
-        "threshold": 10,
-        "audio": ["assets/audio/bgMusic.mp3", "assets/audio/bgMusic.ogg"]
-
-    },
-
-
-    {
-        "numPeople": 3,
-        "numlevel": 10,
-        "player":
-        {
-            "name": "Player",
-            "color": [255, 127, 0],
-            "pos": [0, 150],
-            "spritesheet": "assets/characterSheet/characterSheet.png",
-            "dimensions": [311, 772],
-            "scale": 0.1,
-
-            "colorConstant": 0.5,
-            "moveSpeed": 2,
-            "animations": [
-            {
-                "name": "walk",
-                "order": [4, 3, 2, 1, 0],
-                "framerate": 18,
-                "loop": true,
-                "stillFrame": 2
-            }]
-        },
-        "people": [
-            {
-                "name": "Red",
-                "color": [255, 0, 0],
-                "pos": [572, 150],
-                "spritesheet": "assets/characterSheet/characterSheet.png",
-                "dimensions": [311, 772],
-                "scale": 0.1,
             "additive": true,
-                "animations": []
-            },
-            {
-                "name": "Blue",
-                "color": [0, 0, 255],
-                "pos": [362, 150],
-                "spritesheet": "assets/characterSheet/characterSheet.png",
-                "dimensions": [311, 772],
-                "scale": 0.1,
+            "animations": []
+        },
+        {
+            "name": "GreenBlue",
+            "color": [0, 128, 128],
+            "pos": [712, 150],
+            "spritesheet": "assets/characterSheet/characterSheet.png",
+            "dimensions": [311, 772],
+            "scale": 0.1,
             "additive": true,
-                "animations": []
-            },
-            {
-                "name": "Green",
-                "color": [0, 255, 0],
-                "pos": [802, 150],
-                "spritesheet": "assets/hatman.png",
-                "dimensions": [311, 772],
-                "scale": 0.1,
+            "animations": []
+        }
+
+    ],
+    "background": "assets/testbg.png",
+    "guard":
+    {
+        "name": "Guard",
+        "color": [128, 64, 64],
+        "pos": [975, 150],
+        "spritesheet": "assets/guard.png",
+        "dimensions": [309, 768],
+        "scale": 0.1,
+        "animations": []
+    },
+    "threshold": 10,
+    "audio": ["assets/audio/bgMusic.mp3", "assets/audio/bgMusic.ogg"]
+},
+{
+    "numPeople": 3,
+    "numlevel": 7,
+    "player":
+    {
+        "name": "Player",
+        "color": [0, 0, 0],
+        "pos": [0, 150],
+        "spritesheet": "assets/characterSheet/characterSheet.png",
+        "dimensions": [311, 772],
+        "scale": 0.1,
+        "colorConstant": 0.5,
+        "moveSpeed": 2,
+        "animations": [
+        {
+            "name": "walk",
+            "order": [4, 3, 2, 1, 0],
+            "framerate": 18,
+            "loop": true,
+            "stillFrame": 2
+        }]
+    },
+    "people": [
+        {
+            "name": "BlueGreenRed",
+            "color": [64, 128, 210],
+            "pos": [512, 150],
+            "spritesheet": "assets/characterSheet/characterSheet.png",
+            "dimensions": [311, 772],
+            "scale": 0.1,
+            "additive": true,
+            "animations": []
+        },
+        {
+            "name": "RedGreen",
+            "color": [128, 128, 0],
+            "pos": [312, 150],
+            "spritesheet": "assets/characterSheet/characterSheet.png",
+            "dimensions": [311, 772],
+            "scale": 0.1,
+            "additive": true,
+            "animations": []
+        },
+        {
+            "name": "DarkBlue",
+            "color": [0, 0, 50],
+            "pos": [712, 150],
+            "spritesheet": "assets/characterSheet/characterSheet.png",
+            "dimensions": [311, 772],
+            "scale": 0.1,
+            "additive": true,
+            "animations": []
+        }
+
+    ],
+    "background": "assets/testbg.png",
+    "guard":
+    {
+        "name": "Guard",
+        "color": [51, 72, 150],
+        "pos": [975, 150],
+        "spritesheet": "assets/guard.png",
+        "dimensions": [309, 768],
+        "scale": 0.1,
+        "animations": []
+    },
+    "threshold": 10,
+    "audio": ["assets/audio/bgMusic.mp3", "assets/audio/bgMusic.ogg"]
+},
+{
+    "numPeople": 4,
+    "numlevel": 8,
+    "player":
+    {
+        "name": "Player",
+        "color": [0, 0, 0],
+        "pos": [0, 150],
+        "spritesheet": "assets/characterSheet/characterSheet.png",
+        "dimensions": [311, 772],
+        "scale": 0.1,
+        "colorConstant": 0.5,
+        "moveSpeed": 2,
+        "animations": [
+        {
+            "name": "walk",
+            "order": [4, 3, 2, 1, 0],
+            "framerate": 18,
+            "loop": true,
+            "stillFrame": 2
+        }]
+    },
+    "people": [
+        {
+            "name": "RedGreenBlue",
+            "color": [128, 64, 72],
+            "pos": [612, 150],
+            "spritesheet": "assets/characterSheet/characterSheet.png",
+            "dimensions": [311, 772],
+            "scale": 0.1,
+            "additive": true,
+            "animations": []
+        },
+        {
+            "name": "RedGreenBlue",
+            "color": [200, 32, 10],
+            "pos": [362, 150],
+            "spritesheet": "assets/characterSheet/characterSheet.png",
+            "dimensions": [311, 772],
+            "scale": 0.1,
+            "additive": true,
+            "animations": []
+        },
+        {
+            "name": "RedGB",
+            "color": [90, 50, 50],
+            "pos": [192, 150],
+            "spritesheet": "assets/characterSheet/characterSheet.png",
+            "dimensions": [311, 772],
+            "scale": 0.1,
+            "additive": true,
+            "animations": []
+        },
+        {
+            "name": "RedBlue",
+            "color": [150, 0, 90],
+            "pos": [792, 150],
+            "spritesheet": "assets/characterSheet/characterSheet.png",
+            "dimensions": [311, 772],
+            "scale": 0.1,
+            "additive": true,
+            "animations": []
+        }
+
+    ],
+    "background": "assets/testbg.png",
+    "guard":
+    {
+        "name": "Guard",
+        "color": [255, 64, 90],
+        "pos": [975, 150],
+        "spritesheet": "assets/guard.png",
+        "dimensions": [309, 768],
+        "scale": 0.1,
+        "animations": []
+    },
+    "threshold": 10,
+    "audio": ["assets/audio/bgMusic.mp3", "assets/audio/bgMusic.ogg"]
+},
+{
+    "numPeople": 3,
+    "numlevel": 9,
+    "player":
+    {
+        "name": "Player",
+        "color": [127, 127, 127],
+        "pos": [0, 150],
+        "spritesheet": "assets/characterSheet/characterSheet.png",
+        "dimensions": [311, 772],
+        "scale": 0.1,
+        "colorConstant": 0.5,
+        "moveSpeed": 2,
+        "animations": [
+        {
+            "name": "walk",
+            "order": [4, 3, 2, 1, 0],
+            "framerate": 18,
+            "loop": true,
+            "stillFrame": 2
+        }]
+    },
+    "people": [
+        {
+            "name": "Red",
+            "color": [255, 0, 0],
+            "pos": [612, 150],
+            "spritesheet": "assets/characterSheet/characterSheet.png",
+            "dimensions": [311, 772],
+            "scale": 0.1,
+            "additive": true,
+            "animations": []
+        },
+        {
+            "name": "Black",
+            "color": [0, 0, 0],
+            "pos": [362, 150],
+            "spritesheet": "assets/hatman.png",
+            "dimensions": [311, 772],
+            "scale": 0.1,
             "additive": false,
-                "animations": []
-            }
-
-        ],
-
-        "startColor": [0, 0, 0],
-        "background": "assets/testbg.png",
-        "startPos": [0, 150],
-        "guard":
-        {
-            "name": "Guard",
-            "color": [25, 127, 118],
-            "pos": [1000, 150],
-            "spritesheet": "assets/guard.png",
-            "dimensions": [309, 768],
-            "scale": 0.1,
             "animations": []
         },
-        "threshold": 10,
-        "audio": ["assets/audio/bgMusic.mp3", "assets/audio/bgMusic.ogg"]
-    },
-
-
-    {
-        "numPeople": 3,
-        "numlevel": 11,
-        "player":
         {
-            "name": "Player",
-            "color": [255, 128, 255],
-            "pos": [0, 150],
+            "name": "Green",
+            "color": [0, 255, 0],
+            "pos": [192, 150],
             "spritesheet": "assets/characterSheet/characterSheet.png",
             "dimensions": [311, 772],
             "scale": 0.1,
-
-            "colorConstant": 0.5,
-            "moveSpeed": 2,
-            "animations": [
-            {
-                "name": "walk",
-                "order": [4, 3, 2, 1, 0],
-                "framerate": 18,
-                "loop": true,
-                "stillFrame": 2
-            }]
-        },
-        "people": [
-            {
-                "name": "GB",
-                "color": [255, 192, 192],
-                "pos": [312, 150],
-                "spritesheet": "assets/hatman.png",
-                "dimensions": [311, 772],
-                "scale": 0.1,
-            "additive": false,
-                "animations": []
-            },
-            {
-                "name": "RB",
-                "color": [127, 255, 127],
-                "pos": [512, 150],
-                "spritesheet": "assets/hatman.png",
-                "dimensions": [311, 772],
-                "scale": 0.1,
-            "additive": false,
-                "animations": []
-            },
-            {
-                "name": "RG",
-                "color": [255, 255, 0],
-                "pos": [712, 150],
-                "spritesheet": "assets/characterSheet/characterSheet.png",
-                "dimensions": [311, 772],
-                "scale": 0.1,
             "additive": true,
-                "animations": []
-            }
-
-        ],
-
-        "startColor": [255, 128, 255],
-        "background": "assets/testbg.png",
-        "startPos": [0, 150],
-        "guard":
-        {
-            "name": "Guard",
-            "color": [192, 128, 64],
-            "pos": [1000, 150],
-            "spritesheet": "assets/guard.png",
-            "dimensions": [309, 768],
-            "scale": 0.1,
             "animations": []
-        },
-        "threshold": 10,
-        "audio": ["assets/audio/bgMusic.mp3", "assets/audio/bgMusic.ogg"]
-    },
+        }
 
-
-
-
+    ],
+    "background": "assets/testbg.png",
+    "guard":
     {
-        "numPeople": 5,
-        "numlevel": 12,
-        "player":
+        "name": "Guard",
+        "color": [255, 127, 0],
+        "pos": [975, 150],
+        "spritesheet": "assets/guard.png",
+        "dimensions": [309, 768],
+        "scale": 0.1,
+        "animations": []
+    },
+    "threshold": 10,
+    "audio": ["assets/audio/bgMusic.mp3", "assets/audio/bgMusic.ogg"]
+},
+{
+    "numPeople": 3,
+    "numlevel": 10,
+    "player":
+    {
+        "name": "Player",
+        "color": [255, 127, 0],
+        "pos": [0, 150],
+        "spritesheet": "assets/characterSheet/characterSheet.png",
+        "dimensions": [311, 772],
+        "scale": 0.1,
+        "colorConstant": 0.5,
+        "moveSpeed": 2,
+        "animations": [
         {
-            "name": "Player",
-            "color": [0, 0, 0],
-            "pos": [0, 150],
+            "name": "walk",
+            "order": [4, 3, 2, 1, 0],
+            "framerate": 18,
+            "loop": true,
+            "stillFrame": 2
+        }]
+    },
+    "people": [
+        {
+            "name": "Red",
+            "color": [255, 0, 0],
+            "pos": [572, 150],
             "spritesheet": "assets/characterSheet/characterSheet.png",
             "dimensions": [311, 772],
             "scale": 0.1,
-
-            "colorConstant": 0.5,
-            "moveSpeed": 2,
-            "animations": [
-            {
-                "name": "walk",
-                "order": [4, 3, 2, 1, 0],
-                "framerate": 18,
-                "loop": true,
-                "stillFrame": 2
-            }]
-        },
-        "people": [
-            {
-                "name": "BlueRedGreen",
-                "color": [64, 32, 128],
-                "pos": [270, 150],
-                "spritesheet": "assets/characterSheet/characterSheet.png",
-                "dimensions": [311, 772],
-                "scale": 0.1,
             "additive": true,
-                "animations": []
-            },
-            {
-                "name": "RedGB",
-                "color": [255, 32, 32],
-                "pos": [390, 150],
-                "spritesheet": "assets/characterSheet/characterSheet.png",
-                "dimensions": [311, 772],
-                "scale": 0.1,
-            "additive": true,
-                "animations": []
-            },
-            {
-                "name": "BlueGreenRed",
-                "color": [160, 128, 0],
-                "pos": [520, 150],
-                "spritesheet": "assets/hatman.png",
-                "dimensions": [311, 772],
-                "scale": 0.1,
-            "additive": false,
-                "animations": []
-            },
-            {
-                "name": "BlueGreen",
-                "color": [0, 96, 128],
-                "pos": [640, 150],
-                "spritesheet": "assets/characterSheet/characterSheet.png",
-                "dimensions": [311, 772],
-                "scale": 0.1,
-            "additive": true,
-                "animations": []
-            },
-            {
-                "name": "RedBlue",
-                "color": [32, 255, 224],
-                "pos": [760, 150],
-                "spritesheet": "assets/hatman.png",
-                "dimensions": [311, 772],
-                "scale": 0.1,
-            "additive": false,
-                "animations": []
-            }
-
-        ],
-
-        "startColor": [0, 0, 0],
-        "background": "assets/testbg.png",
-        "startPos": [0, 150],
-        "guard":
-        {
-            "name": "Guard",
-            "color": [0, 32, 0],
-            "pos": [1000, 150],
-            "spritesheet": "assets/guard.png",
-            "dimensions": [309, 768],
-            "scale": 0.1,
             "animations": []
         },
-        "threshold": 7,
-        "audio": ["assets/audio/bgMusic.mp3", "assets/audio/bgMusic.ogg"]
-    }
+        {
+            "name": "Blue",
+            "color": [0, 0, 255],
+            "pos": [362, 150],
+            "spritesheet": "assets/characterSheet/characterSheet.png",
+            "dimensions": [311, 772],
+            "scale": 0.1,
+            "additive": true,
+            "animations": []
+        },
+        {
+            "name": "Green",
+            "color": [0, 255, 0],
+            "pos": [802, 150],
+            "spritesheet": "assets/hatman.png",
+            "dimensions": [311, 772],
+            "scale": 0.1,
+            "additive": false,
+            "animations": []
+        }
 
+    ],
+    "background": "assets/testbg.png",
+    "guard":
+    {
+        "name": "Guard",
+        "color": [25, 127, 118],
+        "pos": [975, 150],
+        "spritesheet": "assets/guard.png",
+        "dimensions": [309, 768],
+        "scale": 0.1,
+        "animations": []
+    },
+    "threshold": 10,
+    "audio": ["assets/audio/bgMusic.mp3", "assets/audio/bgMusic.ogg"]
+},
+{
+    "numPeople": 3,
+    "numlevel": 11,
+    "player":
+    {
+        "name": "Player",
+        "color": [255, 128, 255],
+        "pos": [0, 150],
+        "spritesheet": "assets/characterSheet/characterSheet.png",
+        "dimensions": [311, 772],
+        "scale": 0.1,
+        "colorConstant": 0.5,
+        "moveSpeed": 2,
+        "animations": [
+        {
+            "name": "walk",
+            "order": [4, 3, 2, 1, 0],
+            "framerate": 18,
+            "loop": true,
+            "stillFrame": 2
+        }]
+    },
+    "people": [
+        {
+            "name": "GB",
+            "color": [255, 192, 192],
+            "pos": [312, 150],
+            "spritesheet": "assets/hatman.png",
+            "dimensions": [311, 772],
+            "scale": 0.1,
+            "additive": false,
+            "animations": []
+        },
+        {
+            "name": "RB",
+            "color": [127, 255, 127],
+            "pos": [512, 150],
+            "spritesheet": "assets/hatman.png",
+            "dimensions": [311, 772],
+            "scale": 0.1,
+            "additive": false,
+            "animations": []
+        },
+        {
+            "name": "RG",
+            "color": [255, 255, 0],
+            "pos": [712, 150],
+            "spritesheet": "assets/characterSheet/characterSheet.png",
+            "dimensions": [311, 772],
+            "scale": 0.1,
+            "additive": true,
+            "animations": []
+        }
 
-]
+    ],
+    "background": "assets/testbg.png",
+    "guard":
+    {
+        "name": "Guard",
+        "color": [192, 128, 64],
+        "pos": [975, 150],
+        "spritesheet": "assets/guard.png",
+        "dimensions": [309, 768],
+        "scale": 0.1,
+        "animations": []
+    },
+    "threshold": 10,
+    "audio": ["assets/audio/bgMusic.mp3", "assets/audio/bgMusic.ogg"]
+},
+{
+    "numPeople": 5,
+    "numlevel": 12,
+    "player":
+    {
+        "name": "Player",
+        "color": [0, 0, 0],
+        "pos": [0, 150],
+        "spritesheet": "assets/characterSheet/characterSheet.png",
+        "dimensions": [311, 772],
+        "scale": 0.1,
+        "colorConstant": 0.5,
+        "moveSpeed": 2,
+        "animations": [
+        {
+            "name": "walk",
+            "order": [4, 3, 2, 1, 0],
+            "framerate": 18,
+            "loop": true,
+            "stillFrame": 2
+        }]
+    },
+    "people": [
+        {
+            "name": "BlueRedGreen",
+            "color": [64, 32, 128],
+            "pos": [270, 150],
+            "spritesheet": "assets/characterSheet/characterSheet.png",
+            "dimensions": [311, 772],
+            "scale": 0.1,
+            "additive": true,
+            "animations": []
+        },
+        {
+            "name": "RedGB",
+            "color": [255, 32, 32],
+            "pos": [390, 150],
+            "spritesheet": "assets/characterSheet/characterSheet.png",
+            "dimensions": [311, 772],
+            "scale": 0.1,
+            "additive": true,
+            "animations": []
+        },
+        {
+            "name": "BlueGreenRed",
+            "color": [160, 128, 0],
+            "pos": [520, 150],
+            "spritesheet": "assets/hatman.png",
+            "dimensions": [311, 772],
+            "scale": 0.1,
+            "additive": false,
+            "animations": []
+        },
+        {
+            "name": "BlueGreen",
+            "color": [0, 96, 128],
+            "pos": [640, 150],
+            "spritesheet": "assets/characterSheet/characterSheet.png",
+            "dimensions": [311, 772],
+            "scale": 0.1,
+            "additive": true,
+            "animations": []
+        },
+        {
+            "name": "RedBlue",
+            "color": [32, 255, 224],
+            "pos": [760, 150],
+            "spritesheet": "assets/hatman.png",
+            "dimensions": [311, 772],
+            "scale": 0.1,
+            "additive": false,
+            "animations": []
+        }
+
+    ],
+    "background": "assets/testbg.png",
+    "guard":
+    {
+        "name": "Guard",
+        "color": [0, 32, 0],
+        "pos": [975, 150],
+        "spritesheet": "assets/guard.png",
+        "dimensions": [309, 768],
+        "scale": 0.1,
+        "animations": []
+    },
+    "threshold": 7,
+    "audio": ["assets/audio/bgMusic.mp3", "assets/audio/bgMusic.ogg"]
+}]
