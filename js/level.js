@@ -15,6 +15,7 @@ var bgmusic;
 var restartButton;
 var resetButton;
 var lvlUpButton;
+var threshold;
 
 level.prototype = {
     init: function(levels, curlvl)
@@ -22,7 +23,7 @@ level.prototype = {
         // console.log(curlvl);
         this.levels = levels;
 
-        this.curlvl = curlvl;
+        this.curlvl = 10; //curlvl;
         arrowKeys = this.game.input.keyboard.createCursorKeys();
 
     },
@@ -60,6 +61,10 @@ level.prototype = {
         resetButton = this.game.add.button(1000, 0, '', this.resetGame, this);
         lvlUpButton = this.game.add.button(500, 250, '', this.lvlUp, this);
 
+        threshold = this.game.add.text(500, 60, "Threshold: " + lvl.threshold);
+        threshold.align = "center";
+        threshold.font = "Arial";
+
         youRGB = this.game.add.text(25, 275,
             "Your RGB Values\nRed: " + player.color[0] + "\nGreen: " + player.color[1] + "\nBlue: " + player.color[2]);
         youRGB.fill = "#" + Phaser.Color.getColor(player.color[0], player.color[1], player.color[2]).toString(16);
@@ -89,18 +94,18 @@ level.prototype = {
             thePerson.graphics = this.game.add.graphics(people[i].pos[0], people[i].pos[1] - 100);
             thePerson.graphics.beginFill(0x000000);
             thePerson.graphics.lineStyle(2, 0x990000, 1);
-            thePerson.graphics.drawRect(-11, 60, 50, 10);
+            thePerson.graphics.drawRect(-11, 55, 50, 10);
             thePerson.graphics.lineStyle(2, 0x009900, 1);
-            thePerson.graphics.drawRect(-11, 75, 50, 10);
+            thePerson.graphics.drawRect(-11, 70, 50, 10);
             thePerson.graphics.lineStyle(2, 0x000099, 1);
-            thePerson.graphics.drawRect(-11, 90, 50, 10);
+            thePerson.graphics.drawRect(-11, 85, 50, 10);
             thePerson.graphics.lineStyle(0, 0x000000, 0);
             thePerson.graphics.beginFill(0xFF0000);
-            thePerson.graphics.drawRect(-11, 60, 50 * people[i].color[0] / 255, 10);
+            thePerson.graphics.drawRect(-11, 55, 50 * people[i].color[0] / 255, 10);
             thePerson.graphics.beginFill(0x00FF00);
-            thePerson.graphics.drawRect(-11, 75, 50 * people[i].color[1] / 255, 10);
+            thePerson.graphics.drawRect(-11, 70, 50 * people[i].color[1] / 255, 10);
             thePerson.graphics.beginFill(0x0000FF);
-            thePerson.graphics.drawRect(-11, 90, 50 * people[i].color[2] / 255, 10);
+            thePerson.graphics.drawRect(-11, 85, 50 * people[i].color[2] / 255, 10);
             thePerson.graphics.endFill();
         }
 
@@ -208,11 +213,11 @@ level.prototype = {
 
             dude.graphics.beginFill(0x000000);
             dude.graphics.lineStyle(2, 0x990000, 1);
-            dude.graphics.drawRect(39 - percentR * 50, 60, percentR * 50, 10);
+            dude.graphics.drawRect(39 - percentR * 50, 55, percentR * 50, 10);
             dude.graphics.lineStyle(2, 0x009900, 1);
-            dude.graphics.drawRect(39 - percentG * 50, 75, percentG * 50, 10);
+            dude.graphics.drawRect(39 - percentG * 50, 70, percentG * 50, 10);
             dude.graphics.lineStyle(2, 0x000099, 1);
-            dude.graphics.drawRect(39 - percentB * 50, 90, percentB * 50, 10);
+            dude.graphics.drawRect(39 - percentB * 50, 85, percentB * 50, 10);
             dude.graphics.endFill();
         }
         else
@@ -230,32 +235,32 @@ level.prototype = {
                 diffR += Math.max(0 - you.rgb[0], dudeR / 255 * player.colorConstant);
                 dude.tintTaken[0] += diffR;
                 you.rgb[0] += diffR;
-                percentR = (255 + dude.tintTaken[0]) / 255;
+                percentR = (255 + dude.tintTaken[0] - dudeR) / 255;
             }
             if (dude.tintTaken[1] > dudeG)
             {
                 diffG += Math.max(0 - you.rgb[1], dudeG / 255 * player.colorConstant);
                 dude.tintTaken[1] += diffG;
                 you.rgb[1] += diffG;
-                percentG = (255 + dude.tintTaken[1]) / 255;
+                percentG = (255 + dude.tintTaken[1] - dudeG) / 255;
             }
             if (dude.tintTaken[2] > dudeB)
             {
                 diffB += Math.max(0 - you.rgb[2], dudeB / 255 * player.colorConstant);
                 dude.tintTaken[2] += diffB;
                 you.rgb[2] += diffB;
-                percentB = (255 + dude.tintTaken[2]) / 255;
+                percentB = (255 + dude.tintTaken[2] - dudeB) / 255;
             }
 
             dude.graphics.beginFill(0xFF0000);
             dude.graphics.lineStyle(2, 0x990000, 1);
-            dude.graphics.drawRect(-11, 60, 50 - percentR * 50, 10);
+            dude.graphics.drawRect(-11, 55, 100 - percentR * 50, 10);
             dude.graphics.beginFill(0x00FF00);
             dude.graphics.lineStyle(2, 0x099000, 1);
-            dude.graphics.drawRect(-11, 75, 50 - percentG * 50, 10);
+            dude.graphics.drawRect(-11, 70, 100 - percentG * 50, 10);
             dude.graphics.beginFill(0x0000FF);
             dude.graphics.lineStyle(2, 0x000099, 1);
-            dude.graphics.drawRect(-11, 90, 50 - percentB * 50, 10);
+            dude.graphics.drawRect(-11, 85, 100 - percentB * 50, 10);
             dude.graphics.endFill();
         }
 
