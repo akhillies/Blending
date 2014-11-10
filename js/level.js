@@ -22,10 +22,12 @@ level.prototype = {
     {
         // console.log(curlvl);
         this.levels = levels;
-
         this.curlvl = curlvl;
+        // if (curlvl + 1 >= levels.length)
+        // {
+        //     this.game.state.start("Boot", true, false, this.levels, 0);
+        // }
         arrowKeys = this.game.input.keyboard.createCursorKeys();
-
     },
 
     preload: function()
@@ -282,7 +284,7 @@ level.prototype = {
 
         if (youR >= goalR - lvl.threshold && youR <= goalR + lvl.threshold && youG >= goalG - lvl.threshold && youG <= goalG + lvl.threshold && youB >= goalB - lvl.threshold && youB <= goalB + lvl.threshold)
         {
-            this.goToLevel(this.curlvl + 1);
+            lvlUp();
         }
     },
 
@@ -301,7 +303,14 @@ level.prototype = {
 
     lvlUp: function()
     {
-        this.goToLevel(this.curlvl + 1);
+        if (this.curlvl + 1 >= this.levels.length)
+        {
+            this.game.state.start("Winner", true, false, this.levels);
+        }
+        else
+        {
+            this.goToLevel(this.curlvl + 1);
+        }
     },
 
     restartLevel: function()
