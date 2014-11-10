@@ -294,7 +294,7 @@ level.prototype = {
 
         if (youR >= goalR - lvl.threshold && youR <= goalR + lvl.threshold && youG >= goalG - lvl.threshold && youG <= goalG + lvl.threshold && youB >= goalB - lvl.threshold && youB <= goalB + lvl.threshold)
         {
-            lvlUp();
+            this.lvlUp();
         }
     },
 
