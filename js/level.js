@@ -15,6 +15,8 @@ var bgmusic;
 var restartButton;
 var resetButton;
 var lvlUpButton;
+var timerText;
+var timer;
 var threshold;
 
 level.prototype = {
@@ -66,7 +68,11 @@ level.prototype = {
         restartButton.scale.y = .1
         resetButton = this.game.add.button(1000, 0, '', this.resetGame, this);
         lvlUpButton = this.game.add.button(500, 250, '', this.lvlUp, this);
-        lvlUpButton.addChild(new Phaser.Text(this.game, 0, 0, "asdfadsfa"));
+        
+        timer = new Phaser.Timer(this.game);
+        timerText = new Phaser.Text(this.game, 0, 0, "time here");
+        timerText.align = "center";
+        lvlUpButton.addChild(timerText);
 
         threshold = this.game.add.text(500, 60, "Threshold: " + lvl.threshold);
         if (this.curlvl ==0){
@@ -142,6 +148,7 @@ level.prototype = {
 
     update: function()
     {
+        console.log(timer.elapsed);
         this.game.physics.arcade.overlap(youBlock, thePeople, this.shiftColor, null, this);
         this.game.physics.arcade.overlap(youBlock, goalBlock, this.finishColor, null, this);
 
