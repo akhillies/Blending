@@ -148,14 +148,14 @@ level.prototype = {
             "\nGreen: " + Phaser.Color.getGreen(youBlock.tint) +
             "\nBlue: " + Phaser.Color.getBlue(youBlock.tint));
         youRGB.fill = "#" + Phaser.Color.getColor(Phaser.Color.getRed(youBlock.tint), Phaser.Color.getGreen(youBlock.tint), Phaser.Color.getBlue(youBlock.tint)).toString(16);
-        console.log(player.moveSpeed);
+        
         if (arrowKeys.up.isDown)
         {
-            player.moveSpeed += .01;
+            player.moveSpeed = Math.max(player.moveSpeed + .1, 10);
         }
         else if (arrowKeys.down.isDown)
         {
-            player.moveSpeed -= .01;
+            player.moveSpeed = Math.max(player.moveSpeed - .1, 0);
         }
 
         if (arrowKeys.left.isDown)
