@@ -66,7 +66,7 @@ level.prototype = {
         restartButton.scale.y = .1
         resetButton = this.game.add.button(1000, 0, '', this.resetGame, this);
         lvlUpButton = this.game.add.button(500, 250, '', this.lvlUp, this);
-        lvlUpButton.addChild(new Text(this, 0, 0, "asdfadsfa"));
+        lvlUpButton.addChild(new Text(this.game, 0, 0, "asdfadsfa"));
 
         threshold = this.game.add.text(500, 60, "Threshold: " + lvl.threshold);
         if (this.curlvl ==0){
