@@ -66,6 +66,7 @@ level.prototype = {
         restartButton.scale.y = .1
         resetButton = this.game.add.button(1000, 0, '', this.resetGame, this);
         lvlUpButton = this.game.add.button(500, 250, '', this.lvlUp, this);
+        lvlUpButton.addChild(new Text(this, 0, 0, "asdfadsfa"));
 
         threshold = this.game.add.text(500, 60, "Threshold: " + lvl.threshold);
         if (this.curlvl ==0){
@@ -149,14 +150,14 @@ level.prototype = {
             "\nBlue: " + Phaser.Color.getBlue(youBlock.tint));
         youRGB.fill = "#" + Phaser.Color.getColor(Phaser.Color.getRed(youBlock.tint), Phaser.Color.getGreen(youBlock.tint), Phaser.Color.getBlue(youBlock.tint)).toString(16);
         
-        if (arrowKeys.up.isDown)
-        {
-            player.moveSpeed = Math.max(player.moveSpeed + .1, 10);
-        }
-        else if (arrowKeys.down.isDown)
-        {
-            player.moveSpeed = Math.max(player.moveSpeed - .1, .2);
-        }
+        // if (arrowKeys.up.isDown)
+        // {
+        //     player.moveSpeed = Math.max(player.moveSpeed + .1, 10);
+        // }
+        // else if (arrowKeys.down.isDown)
+        // {
+        //     player.moveSpeed = Math.max(player.moveSpeed - .1, 1);
+        // }
 
         if (arrowKeys.left.isDown)
         {
