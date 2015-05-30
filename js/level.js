@@ -65,7 +65,7 @@ level.prototype = {
         restartButton.scale.x = .1
         restartButton.scale.y = .1
         resetButton = this.game.add.button(1000, 0, '', this.resetGame, this);
-        lvlUpButton = this.game.add.button(500, 250, 'clicktocheat', this.lvlUp, this);
+        lvlUpButton = this.game.add.button(500, 250, '', this.lvlUp, this);
 
         threshold = this.game.add.text(500, 60, "Threshold: " + lvl.threshold);
         if (this.curlvl ==0){
@@ -150,11 +150,11 @@ level.prototype = {
         youRGB.fill = "#" + Phaser.Color.getColor(Phaser.Color.getRed(youBlock.tint), Phaser.Color.getGreen(youBlock.tint), Phaser.Color.getBlue(youBlock.tint)).toString(16);
         if (arrowKeys.up.isDown)
         {
-            youBlock.y -= moveSpeed;
+            player.moveSpeed += 1;
         }
         else if (arrowKeys.down.isDown)
         {
-            youBlock.y += moveSpeed;
+            player.moveSpeed -= 1;
         }
 
         if (arrowKeys.left.isDown)
