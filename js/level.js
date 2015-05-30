@@ -155,7 +155,7 @@ level.prototype = {
         }
         else if (arrowKeys.down.isDown)
         {
-            player.moveSpeed = Math.max(player.moveSpeed - .1, 0);
+            player.moveSpeed = Math.max(player.moveSpeed - .1, .2);
         }
 
         if (arrowKeys.left.isDown)
