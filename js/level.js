@@ -151,11 +151,11 @@ level.prototype = {
         console.log(player.moveSpeed);
         if (arrowKeys.up.isDown)
         {
-            player.moveSpeed += 1;
+            player.moveSpeed += .1;
         }
         else if (arrowKeys.down.isDown)
         {
-            player.moveSpeed -= 1;
+            player.moveSpeed -= .1;
         }
 
         if (arrowKeys.left.isDown)
