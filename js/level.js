@@ -15,9 +15,9 @@ var bgmusic;
 var restartButton;
 var resetButton;
 var lvlUpButton;
-var timerText;
-var timer;
+var lvlTime;
 var threshold;
+var startTime;
 
 level.prototype = {
     init: function(levels, curlvl)
@@ -67,14 +67,16 @@ level.prototype = {
         restartButton.scale.x = .1
         restartButton.scale.y = .1
         resetButton = this.game.add.button(1000, 0, '', this.resetGame, this);
-        lvlUpButton = this.game.add.button(500, 250, '', this.lvlUp, this);
+        lvlUpButton = this.game.add.button(425, 350, '', this.lvlUp, this);
         
-        timer = new Phaser.Timer(this.game);
-        timerText = new Phaser.Text(this.game, 0, 0, "time here");
-        timerText.align = "center";
-        lvlUpButton.addChild(timerText);
+        startTime = this.game.time.now;
+        lvlTime = new Phaser.Text(this.game, 0, 0, "Time on this level = 00:00:00");
+        lvlTime.align = "center";
+        lvlTime.font = "Arial";
+        lvlTime.setShadow(1, 1, 'rgba(0,0,0,1)', 0);
+        lvlUpButton.addChild(lvlTime);
 
-        threshold = this.game.add.text(500, 60, "Threshold: " + lvl.threshold);
+        threshold = this.game.add.text(450, 60, "Threshold: " + lvl.threshold);
         if (this.curlvl ==0){
           threshold.fill="#FFFFFF";
         }
@@ -85,14 +87,14 @@ level.prototype = {
             "Your RGB Values\nRed: " + player.color[0] + "\nGreen: " + player.color[1] + "\nBlue: " + player.color[2]);
         youRGB.fill = "#" + Phaser.Color.getColor(player.color[0], player.color[1], player.color[2]).toString(16);
         youRGB.align = "center";
-        youRGB.setShadow(0, 0, 'rgba(50,50,50,1)', 5);
+        youRGB.setShadow(0, 1, 'rgba(50,50,50,1)', 3);
         youRGB.font = "Arial";
 
         goalRGB = this.game.add.text(700, 300,
             "Guard's RGB Values\nRed: " + guard.color[0] + "\nGreen: " + guard.color[1] + "\nBlue: " + guard.color[2]);
         goalRGB.fill = "#" + Phaser.Color.getColor(guard.color[0], guard.color[1], guard.color[2]).toString(16),
         goalRGB.align = "center";
-        goalRGB.setShadow(0, 0, 'rgba(50,50,50,1)', 5);
+        goalRGB.setShadow(1, 0, 'rgba(50,50,50,1)', 3);
         goalRGB.font = "Arial";
 
         thePeople = this.game.add.group();
@@ -148,7 +150,7 @@ level.prototype = {
 
     update: function()
     {
-        console.log(timer.elapsed);
+        this.setLvlTime(this.game.time.now) 
         this.game.physics.arcade.overlap(youBlock, thePeople, this.shiftColor, null, this);
         this.game.physics.arcade.overlap(youBlock, goalBlock, this.finishColor, null, this);
 
@@ -324,12 +326,15 @@ level.prototype = {
     {
         if (this.curlvl + 1 >= this.levels.length)
         {
-            this.game.state.start("Winner", true, false, this.levels);
+            console.log("hey");
+            this.createLvl();
+            // this.game.state.start("Winner", true, false, this.levels);
         }
-        else
-        {
+        // else
+        // {
             this.goToLevel(this.curlvl + 1);
-        }
+        console.log(this.levels.length + " " + this.curlvl);
+        // }
     },
 
     restartLevel: function()
@@ -340,5 +345,73 @@ level.prototype = {
     resetGame: function()
     {
         this.goToLevel(0);
+    },
+
+    setLvlTime: function(now)
+    {
+        var elapsed = new Date(now - startTime);
+        var min = ("0" + elapsed.getMinutes()).slice(-2);
+        var sec = ("0" + elapsed.getSeconds()).slice(-2);
+        var centsec = ("0" + Math.round(elapsed.getMilliseconds() / 10)).slice(-2);
+
+        if(min > 99)
+        {
+            this.restartLevel()
+        }
+
+        lvlTime.text = min + ":" + sec + ":" + centsec;
+    },
+    
+    createLvl: function()
+    {
+        var newLvl =
+            {
+                "numPeople": 1,
+                "numlevel": this.curLvl + 1,
+                "player":
+                {
+                    "name": "Player",
+                    "color": [0, 0, 0],
+                    "pos": [0, 150],
+                    "spritesheet": "assets/characterSheet/characterSheet.png",
+                    "dimensions": [311, 772],
+                    "scale": 0.1,
+                    "colorConstant": 0.5,
+                    "moveSpeed": 2,
+                    "animations": [
+                    {
+                        "name": "walk",
+                        "order": [4, 3, 2, 1, 0],
+                        "framerate": 18,
+                        "loop": true,
+                        "stillFrame": 2
+                    }]
+                },
+                "people": [
+                {
+                    "name": "Red",
+                    "color": [255, 0, 0],
+                    "pos": [512, 150],
+                    "spritesheet": "assets/characterSheet/characterSheet.png",
+                    "dimensions": [311, 772],
+                    "scale": 0.1,
+                    "additive": true,
+                    "animations": []
+                }],
+                "background": "assets/bg1.png",
+                "guard":
+                {
+                    "name": "Guard",
+                    "color": [150, 0, 0],
+                    "pos": [975, 150],
+                    "spritesheet": "assets/guard.png",
+                    "dimensions": [309, 768],
+                    "scale": 0.1,
+                    "animations": []
+                },
+                "threshold": 10,
+                "audio": "assets/audio/bgMusic.mp3"
+            };
+        this.levels.push(newLvl);
     }
 }
