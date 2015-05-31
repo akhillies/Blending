@@ -1,4 +1,4 @@
-var level = function(game) {}
+var level = function(game) {};
 var lvl;
 var people;
 var guard;
@@ -314,6 +314,7 @@ level.prototype = {
         thePeople.callAll('kill');
         youBlock.kill();
         goalBlock.kill();
+        lvlUpButton.destroy();
         restartButton.destroy();
         resetButton.destroy();
         youRGB.destroy();
@@ -324,17 +325,18 @@ level.prototype = {
 
     lvlUp: function()
     {
-        if (this.curlvl + 1 >= this.levels.length)
+        if(this.curlvl > 25)
         {
-            console.log("hey");
-            this.createLvl();
-            // this.game.state.start("Winner", true, false, this.levels);
+            this.game.state.start("Winner", true, false, this.levels);
         }
-        // else
-        // {
+        else 
+        {
+            if (this.curlvl + 1 >= this.levels.length)
+            {
+                this.createLvl();
+            }
             this.goToLevel(this.curlvl + 1);
-        console.log(this.levels.length + " " + this.curlvl);
-        // }
+        }
     },
 
     restartLevel: function()
@@ -364,54 +366,63 @@ level.prototype = {
     
     createLvl: function()
     {
-        var newLvl =
+        var color = player.color;
+        
+        var numpeops = Math.min(Math.round(Math.random()*this.curlvl/2) + 1, 10);
+        var newplaya = util.Person("player",
+                                    color,
+                                    [0, 150],
+                                    "player",
+                                    2);
+
+        var people = [];
+        for(var i = 0; i < numpeops; i++)
+        {
+            var additive = Math.random() * 2;
+            var newpeop;
+            var pos = [Math.round(925/numpeops*i + 125), 150];
+            
+            if(additive >= 1)
             {
-                "numPeople": 1,
-                "numlevel": this.curLvl + 1,
-                "player":
-                {
-                    "name": "Player",
-                    "color": [0, 0, 0],
-                    "pos": [0, 150],
-                    "spritesheet": "assets/characterSheet/characterSheet.png",
-                    "dimensions": [311, 772],
-                    "scale": 0.1,
-                    "colorConstant": 0.5,
-                    "moveSpeed": 2,
-                    "animations": [
-                    {
-                        "name": "walk",
-                        "order": [4, 3, 2, 1, 0],
-                        "framerate": 18,
-                        "loop": true,
-                        "stillFrame": 2
-                    }]
-                },
-                "people": [
-                {
-                    "name": "Red",
-                    "color": [255, 0, 0],
-                    "pos": [512, 150],
-                    "spritesheet": "assets/characterSheet/characterSheet.png",
-                    "dimensions": [311, 772],
-                    "scale": 0.1,
-                    "additive": true,
-                    "animations": []
-                }],
-                "background": "assets/bg1.png",
-                "guard":
-                {
-                    "name": "Guard",
-                    "color": [150, 0, 0],
-                    "pos": [975, 150],
-                    "spritesheet": "assets/guard.png",
-                    "dimensions": [309, 768],
-                    "scale": 0.1,
-                    "animations": []
-                },
-                "threshold": 10,
-                "audio": "assets/audio/bgMusic.mp3"
-            };
+                var r = Math.floor(Math.random() * 256);
+                var g = Math.floor(Math.random() * 256);
+                var b = Math.floor(Math.random() * 256);
+                color = [Math.min(color[0] + r, 255), Math.min(color[1] + g, 255), Math.min(color[2] + b, 255)];
+                newpeop = util.Person("addingDude" + i,
+                                        [r, g, b],
+                                        pos,
+                                        "personAdd",
+                                        0);
+            }
+            else
+            {
+                var r = Math.floor(Math.random() * 256);
+                var g = Math.floor(Math.random() * 256);
+                var b = Math.floor(Math.random() * 256);
+                color = [Math.max(color[0] - r, 0), Math.max(color[1] - g, 0), Math.max(color[2] - b, 0)];
+                newpeop = util.Person("subingDude" + i,
+                                        [r, g, b],
+                                        pos,
+                                        "personSub",
+                                        0);
+            }
+            people.push(newpeop);
+        }
+        
+        var thres = Math.round(Math.random() * 7 + 4);
+        var guard = util.Person("grumpy",
+                                color,
+                                [],
+                                "guard",
+                                0);
+        
+        var newLvl = util.Level(numpeops,
+                                this.curLvl + 1,
+                                newplaya,
+                                people,
+                                "assets/testbg.png",
+                                guard,
+                                thres);
         this.levels.push(newLvl);
     }
 }

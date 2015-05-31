@@ -44,8 +44,7 @@
         "animations": []
     },
     "threshold": 10,
-    "audio": "assets/audio/bgMusic.mp3"
-
+    "audio": ["assets/audio/bgMusic.mp3", "assets/audio/bgMusic.ogg"]
 },
 {
     "numPeople": 3,

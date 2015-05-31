@@ -1,26 +1,81 @@
+var util = {
+    Level: function(numPeople, numLvl, player, people, background, guard, threshold)
+    {
+        return {
+            "numPeople": numPeople,
+            "numlevel": numLvl,
+            "player": player,
+            "people": people,
+            "background": background,
+            "guard": guard,
+            "threshold": threshold,
+            "audio": ["assets/audio/bgMusic.mp3", "assets/audio/bgMusic.ogg"]
+        }
+    },
+    
+    Person: function(name, color, pos, type, moveSpeed)
+    {
+        var dimensions;
+        var animations;
+        var spritesheet;
+        var additive;
+        if(type == "player")
+        {
+            dimensions = [311, 772];
+            spritesheet = "assets/characterSheet/characterSheet.png",
+            additive = false;
+            animations = [this.Animation("walk", [4, 3, 2, 1, 0], 18, true, 2)];
 
-function Level (numPeople, people, goalColor, startColor ){
-  this.numPeople = numPeople;
-  this.people = people;
-  this.goalColor = goalColor;
-  this.startColor = startColor;
-}
+        }
+        else if(type == "personAdd")
+        {
+            dimensions = [311, 772];
+            spritesheet = "assets/characterSheet/characterSheet.png",
+            additive = true;
+            animations = [];
+        }
+        else if(type == "personSub")
+        {
+            dimensions = [311, 772];
+            spritesheet = "assets/hatman.png",
+            additive = false;
+            animations = [];
+        }
+        else if(type == "guard")
+        {
+            dimensions = [309, 768];
+            pos = [975, 150];
+            spritesheet = "assets/guard.png",
+            additive = false;
+            animations = [];
+        }
+        else
+        {
+            console.log("gave a type of person that does not exist!!!");
+        }
 
-function Person(name, color, pos, spritesheet, dimensions, animations){
-  this.color = color;
-  this.pos = pos;
-  this.spritesheet = spritesheet;
-  this.dimesions = dimensions;
-  this.name = name;
-  this.animations = animations;
-  
-}
+        return {
+            "name": name,
+            "color": color,
+            "pos": pos,
+            "spritesheet": spritesheet,
+            "dimensions": dimensions,
+            "scale": 0.1,
+            "colorConstant": 0.5,
+            "moveSpeed": moveSpeed,
+            "additive": additive,
+            "animations": animations
+        }
+    },
 
-function Animation(name, order, framerate, loop, stillFrame){
-  this.name = name;
-  this.order = order;
-  this.framerate = framerate;
-  this.loop = loop;
-  this.stillFrame = stillFrame;
-  
-}
+    Animation: function(name, order, framerate, loop, stillFrame)
+    {
+        return {
+            "name": name,
+            "order": order,
+            "framerate": framerate,
+            "loop": loop,
+            "stillFrame": stillFrame
+        };
+    }
+};
