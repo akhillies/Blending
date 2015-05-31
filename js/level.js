@@ -411,7 +411,7 @@ level.prototype = {
         
         while(ll >= this.levels.length)
         {
-            this.createLvl(this.state.numlvls);
+            this.createLvl();
         }
         this.info.killAll();
         
@@ -428,7 +428,7 @@ level.prototype = {
         {
             if (this.curlvl + 1 >= this.levels.length)
             {
-                this.createLvl(this.state.numlvls - this.curlvl);
+                this.createLvl();
             }
             this.goToLevel(this.curlvl + 1);
         }
@@ -464,14 +464,14 @@ level.prototype = {
         this.info.lvlTime.text = min + ":" + sec + ":" + centsec;
     },
     
-    createLvl: function(howrand)
+    createLvl: function()
     {
         var r = Math.min(Math.max(Phaser.Color.getRed(this.info.youBlock.tint) - Math.floor(Math.random() * 50)-25, 0), 255);
         var b = Math.min(Math.max(Phaser.Color.getGreen(this.info.youBlock.tint) - Math.floor(Math.random() * 50)-25, 0), 255);
         var g = Math.min(Math.max(Phaser.Color.getBlue(this.info.youBlock.tint) - Math.floor(Math.random() * 50)-25, 0), 255);
         var color = [r,g,b];
         
-        var numpeops = Math.min(Math.round(Math.random()*this.curlvl/2) + 1, 10);
+        var numpeops = Math.min(Math.round(Math.random()*this.curlvl) + 1, 7);
         var newplaya = util.Person("player",
                                     color,
                                     [0, 150],
@@ -523,15 +523,15 @@ level.prototype = {
        
         
         var curri = people.length;
-        howrand = Math.max(howrand, 0);
+        var howrand = Math.max(this.state.numlvls - this.curlvl + numpeops*2, 0);
         while (curri >= howrand)
         {
             var randi = Math.floor(Math.random() * curri);
             curri -= 1;
             
-            var tmpv = array[curri];
-            array[curri] = array[randi];
-            array[randi] = tmpv;
+            var tmpv = people[curri];
+            people[curri] = people[randi];
+            people[randi] = tmpv;
         }
         
 
