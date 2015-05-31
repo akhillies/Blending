@@ -9,7 +9,8 @@ var util = {
             "background": background,
             "guard": guard,
             "threshold": threshold,
-            "audio": ["assets/audio/bgMusic.mp3", "assets/audio/bgMusic.ogg"]
+            "audio": ["assets/audio/bgMusic.mp3", "assets/audio/bgMusic.ogg"],
+            "completed": false
         }
     },
     
