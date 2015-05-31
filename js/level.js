@@ -52,7 +52,7 @@ level.prototype = {
             this.goalBlock.kill();
             this.youRGB.destroy();
             this.goalRGB.destroy();
-            this.bgmusic.destroy();
+            // this.bgmusic.destroy();
             this.restartButton.destroy();
             this.resetButton.destroy();
             this.lvlUpButton.destroy();
@@ -73,6 +73,9 @@ level.prototype = {
         //     this.game.state.start("Boot", true, false, this.levels, 0);
         // }
         this.info.arrowKeys = this.game.input.keyboard.createCursorKeys();
+        this.game.load.audio('bgaudio', this.info.lvl.audio);
+        this.info.bgmusic = this.game.add.audio('bgaudio', 1, true);
+        this.info.bgmusic.play();
     },
 
     preload: function()
@@ -91,7 +94,6 @@ level.prototype = {
         {
             this.game.load.spritesheet(this.info.people[i].name, this.info.people[i].spritesheet, this.info.people[i].dimensions[0], this.info.people[i].dimensions[1]);
         }
-        this.game.load.audio('bgaudio', this.info.lvl.audio);
         // console.log(this.info.people);
         // console.log(this.info.player);
         // console.log(this.info.guard);
@@ -99,8 +101,6 @@ level.prototype = {
 
     create: function()
     {
-        this.info.bgmusic = this.game.add.audio('bgaudio', 1, true);
-        this.info.bgmusic.play();
 
         var bg = this.game.add.sprite(0, 0, "bg");
         // console.log(bg)
