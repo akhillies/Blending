@@ -18,6 +18,7 @@ var lvlUpButton;
 var lvlTime;
 var threshold;
 var startTime;
+var lvlText;
 
 level.prototype = {
     init: function(levels, curlvl)
@@ -39,7 +40,8 @@ level.prototype = {
         guard = lvl.guard;
         player = lvl.player;
         this.game.load.image("bg", lvl.background);
-        this.game.load.image("options", "assets/gear_icon_512x512.png");
+        this.game.load.image("options", "assets/gear.png");
+        this.game.load.image("restart", "assets/restart.png");
         this.game.load.spritesheet(guard.name, guard.spritesheet, guard.dimensions[0], guard.dimensions[1]);
         this.game.load.spritesheet(player.name, player.spritesheet, player.dimensions[0], player.dimensions[1]);
         for (var i = 0; i < lvl.numPeople; i++)
@@ -63,10 +65,19 @@ level.prototype = {
         bg.scale.x = 1
         bg.scale.y = .38
 
-        restartButton = this.game.add.button(0, 0, 'options', this.restartLevel, this);
+        lvlText = this.game.add.text(520, 10, this.curlvl + 1);
+        lvlText.font = "Comic Sans";
+        lvlText.setShadow(0, 0, 'rgba(123,45,6,.7)', 8);
+        lvlText.strokeThickness = 3;
+        lvlText.fill = "#ffffff";
+        lvlText.align = "center";
+
+        restartButton = this.game.add.button(0, 0, 'restart', this.restartLevel, this);
         restartButton.scale.x = .1
         restartButton.scale.y = .1
-        resetButton = this.game.add.button(1000, 0, '', this.resetGame, this);
+        resetButton = this.game.add.button(950, 0, 'options', this.resetGame, this);
+        resetButton.scale.x = .1;
+        resetButton.scale.y = .1;
         lvlUpButton = this.game.add.button(425, 350, '', this.lvlUp, this);
         
         startTime = this.game.time.now;
@@ -159,14 +170,14 @@ level.prototype = {
             "\nBlue: " + Phaser.Color.getBlue(youBlock.tint));
         youRGB.fill = "#" + Phaser.Color.getColor(Phaser.Color.getRed(youBlock.tint), Phaser.Color.getGreen(youBlock.tint), Phaser.Color.getBlue(youBlock.tint)).toString(16);
         
-        // if (arrowKeys.up.isDown)
-        // {
-        //     player.moveSpeed = Math.max(player.moveSpeed + .1, 10);
-        // }
-        // else if (arrowKeys.down.isDown)
-        // {
-        //     player.moveSpeed = Math.max(player.moveSpeed - .1, 1);
-        // }
+        if (arrowKeys.up.isDown)
+        {
+            player.moveSpeed = Math.max(player.moveSpeed + .1, 4);
+        }
+        else if (arrowKeys.down.isDown)
+        {
+            player.moveSpeed = Math.max(player.moveSpeed - .1, 1);
+        }
 
         if (arrowKeys.left.isDown)
         {
@@ -366,7 +377,10 @@ level.prototype = {
     
     createLvl: function()
     {
-        var color = player.color;
+        var r = Math.min(Math.max(Phaser.Color.getRed(youBlock.tint) - Math.floor(Math.random() * 50)-25, 0), 255);
+        var b = Math.min(Math.max(Phaser.Color.getGreen(youBlock.tint) - Math.floor(Math.random() * 50)-25, 0), 255);
+        var g = Math.min(Math.max(Phaser.Color.getBlue(youBlock.tint) - Math.floor(Math.random() * 50)-25, 0), 255);
+        var color = [r,g,b];
         
         var numpeops = Math.min(Math.round(Math.random()*this.curlvl/2) + 1, 10);
         var newplaya = util.Person("player",
@@ -376,32 +390,34 @@ level.prototype = {
                                     2);
 
         var people = [];
+        var numAdds = 0;
         for(var i = 0; i < numpeops; i++)
         {
-            var additive = Math.random() * 2;
+            var additive = Math.random() * numpeops / (numAdds+1) + Math.random()/2;
             var newpeop;
-            var pos = [Math.round(925/numpeops*i + 125), 150];
+            var pos = [Math.round(900/numpeops*i + 90), 150];
             
             if(additive >= 1)
             {
-                var r = Math.floor(Math.random() * 256);
-                var g = Math.floor(Math.random() * 256);
-                var b = Math.floor(Math.random() * 256);
+                numAdds++;
+                r = Math.floor(Math.random() * 256);
+                g = Math.floor(Math.random() * 256);
+                b = Math.floor(Math.random() * 256);
                 color = [Math.min(color[0] + r, 255), Math.min(color[1] + g, 255), Math.min(color[2] + b, 255)];
-                newpeop = util.Person("addingDude" + i,
-                                        [r, g, b],
+                newpeop = util.Person("addingDude" + numAdds,
+                                        [r + (8*Math.random()-4), g + (8*Math.random()-4), b + (8*Math.random()-4)],
                                         pos,
                                         "personAdd",
                                         0);
             }
             else
             {
-                var r = Math.floor(Math.random() * 256);
-                var g = Math.floor(Math.random() * 256);
-                var b = Math.floor(Math.random() * 256);
+                r = Math.floor(Math.random() * 256);
+                g = Math.floor(Math.random() * 256);
+                b = Math.floor(Math.random() * 256);
                 color = [Math.max(color[0] - r, 0), Math.max(color[1] - g, 0), Math.max(color[2] - b, 0)];
-                newpeop = util.Person("subingDude" + i,
-                                        [r, g, b],
+                newpeop = util.Person("subingDude" + (i - numAdds),
+                                        [r + (8*Math.random()-4), g + (8*Math.random()-4), b + (8*Math.random()-4)],
                                         pos,
                                         "personSub",
                                         0);
