@@ -245,16 +245,19 @@ level.prototype = {
         
         if (this.info.arrowKeys.up.isDown)
         {
-            this.info.player.moveSpeed = Math.max(this.info.player.moveSpeed + .1, 4);
+            this.info.player.moveSpeed = Math.min(this.info.player.moveSpeed + .07, 13);
+            this.info.player.colorConstant = Math.min(this.info.player.colorConstant + .01, 2.3);
         }
         else if (this.info.arrowKeys.down.isDown)
         {
             this.info.player.moveSpeed = Math.max(this.info.player.moveSpeed - .1, 1);
+            this.info.player.colorConstant = Math.max(this.info.player.colorConstant - .03, .05);
         }
 
         if (this.info.arrowKeys.left.isDown)
         {
             this.info.youBlock.x -= this.info.player.moveSpeed;
+            console.log(this.info.player.moveSpeed);
             this.info.youBlock.animations.play('walk');
             this.info.youBlock.scale.x = -this.info.player.scale;
         }
@@ -476,7 +479,7 @@ level.prototype = {
                                     color,
                                     [0, 150],
                                     "player",
-                                    2);
+                                    2.5);
 
         var people = [];
         var numAdds = 0;
