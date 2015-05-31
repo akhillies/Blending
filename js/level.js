@@ -407,13 +407,12 @@ level.prototype = {
         // bgmusic.destroy();
         // prevLvlButton.destroy();
         // nextLvlButton.destroy();
-
-        this.info.killAll();
         
         while(ll >= this.levels.length)
         {
             this.createLvl(this.state.numlvls);
         }
+        this.info.killAll();
         
         this.game.state.restart(true, false, this.levels, ll)
     },
